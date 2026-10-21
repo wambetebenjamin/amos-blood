@@ -83,14 +83,14 @@ export function SignUpForm({ initialRole = "donor" }: { initialRole?: Role }) {
 
   return (
     <div className="flat_card">
-      <div className="mb-5 flex gap-2 rounded-[5px] bg-[#f4f6f8] p-1">
+      <div className="mb-5 flex gap-2 rounded-[5px] bg-[#f7f0f0] p-1">
         {(["donor", "hospital"] as const).map((option) => (
           <button
             key={option}
             type="button"
             onClick={() => setRole(option)}
             className={`flex-1 rounded-[4px] px-3 py-2.5 font-body text-[13.5px] font-semibold transition ${
-              role === option ? "bg-white text-[#1c7a58] shadow-sm" : "text-[#7a7b7c]"
+              role === option ? "bg-white text-[#8f0b1f] shadow-sm" : "text-[#7d6c6f]"
             }`}
             aria-pressed={role === option}
           >
@@ -228,7 +228,7 @@ export function SignUpForm({ initialRole = "donor" }: { initialRole?: Role }) {
         </div>
       </form>
 
-      <p className="mt-5 font-body text-[13px] leading-relaxed text-[#6b6a6a]">
+      <p className="mt-5 font-body text-[13px] leading-relaxed text-[#6d5f62]">
         Already registered?{" "}
         <Link href="/auth/signin" className="text_link">
           Sign in

@@ -75,7 +75,7 @@ export async function POST(request: Request) {
     {
       margin: 1,
       width: 360,
-      color: { dark: "#1c7a58", light: "#ffffff" },
+      color: { dark: "#8f0b1f", light: "#ffffff" },
       errorCorrectionLevel: "M",
     },
   );

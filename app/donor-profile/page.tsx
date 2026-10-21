@@ -30,7 +30,7 @@ export default async function DonorProfilePage() {
           <div className="container-t max-w-2xl">
             <div className="flat_card text-center">
               <h1 className="text-[30px]">No donor profile found</h1>
-              <p className="mt-3 font-body text-[14.5px] leading-relaxed text-[#6b6a6a]">
+              <p className="mt-3 font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
                 Your session is active, but there is no donor record attached to it yet. Complete the
                 donor form and we will link the profile to your email.
               </p>
@@ -51,7 +51,7 @@ export default async function DonorProfilePage() {
 
   const qrCode = await QRCode.toDataURL(
     JSON.stringify({ v: 1, id: donor.id, bloodType: donor.bloodType, county: donor.county }),
-    { margin: 1, width: 360, color: { dark: "#1c7a58", light: "#ffffff" }, errorCorrectionLevel: "M" },
+    { margin: 1, width: 360, color: { dark: "#8f0b1f", light: "#ffffff" }, errorCorrectionLevel: "M" },
   );
 
   return (

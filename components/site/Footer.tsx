@@ -36,17 +36,17 @@ export function Footer() {
             <p className="footer_text mt-5">
               {site.description} Built for Kenyan hospitals, blood banks and volunteer donors.
             </p>
-            <div className="mt-5 grid gap-3 font-body text-[14px] text-[#6f6f6f]">
+            <div className="mt-5 grid gap-3 font-body text-[14px] text-[#716365]">
               <span className="flex items-start gap-2.5">
-                <MapPin size={16} className="mt-1 flex-none text-[#3cc78f]" aria-hidden="true" />
+                <MapPin size={16} className="mt-1 flex-none text-[#c8102e]" aria-hidden="true" />
                 Nairobi, Kenya
               </span>
-              <a href={`tel:+${site.whatsappNumber}`} className="flex items-center gap-2.5 hover:text-[#3cc78f]">
-                <Phone size={16} className="flex-none text-[#3cc78f]" aria-hidden="true" />
+              <a href={`tel:+${site.whatsappNumber}`} className="flex items-center gap-2.5 hover:text-[#c8102e]">
+                <Phone size={16} className="flex-none text-[#c8102e]" aria-hidden="true" />
                 +{site.whatsappNumber}
               </a>
-              <a href={`mailto:${site.email}`} className="flex items-center gap-2.5 hover:text-[#3cc78f]">
-                <Mail size={16} className="flex-none text-[#3cc78f]" aria-hidden="true" />
+              <a href={`mailto:${site.email}`} className="flex items-center gap-2.5 hover:text-[#c8102e]">
+                <Mail size={16} className="flex-none text-[#c8102e]" aria-hidden="true" />
                 {site.email}
               </a>
             </div>

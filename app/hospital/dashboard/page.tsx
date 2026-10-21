@@ -31,8 +31,8 @@ export default async function HospitalDashboardPage() {
       <section className="section_padding">
         <div className="container-t">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-            <p className="font-body text-[13px] text-[#6b6a6a]">
-              Signed in as <span className="font-semibold text-[#191d34]">{session.user.email}</span>
+            <p className="font-body text-[13px] text-[#6d5f62]">
+              Signed in as <span className="font-semibold text-[#2a1215]">{session.user.email}</span>
             </p>
             <Link href="/urgent-requests" className="read_more text-[14px]">
               View the public board

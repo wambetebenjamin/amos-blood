@@ -53,8 +53,8 @@ export default function RegisterDonorPage() {
                   "You respond with an arrival time, then donate at the blood bank.",
                 ].map((line) => (
                   <li key={line} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={16} className="mt-1 flex-none text-[#3cc78f]" aria-hidden="true" />
-                    <span className="font-body text-[13.5px] leading-relaxed text-[#5c5c5c]">{line}</span>
+                    <CheckCircle2 size={16} className="mt-1 flex-none text-[#c8102e]" aria-hidden="true" />
+                    <span className="font-body text-[13.5px] leading-relaxed text-[#5f5254]">{line}</span>
                   </li>
                 ))}
               </ul>
@@ -65,17 +65,17 @@ export default function RegisterDonorPage() {
               return (
                 <div className="soft_card" key={item.title}>
                   <div className="flex items-center gap-2">
-                    <Icon size={17} className="text-[#2fa877]" aria-hidden="true" />
+                    <Icon size={17} className="text-[#9a0c22]" aria-hidden="true" />
                     <h3 className="text-[18px]">{item.title}</h3>
                   </div>
-                  <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5c5c5c]">{item.copy}</p>
+                  <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5f5254]">{item.copy}</p>
                 </div>
               );
             })}
 
             <div className="flat_card">
               <h2 className="text-[18px]">Already registered?</h2>
-              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#6b6a6a]">
+              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#6d5f62]">
                 Sign in to view your donor card, update your alert preferences or record a new donation.
               </p>
               <Link href="/auth/signin?role=donor" className="read_more mt-4 text-[14px]">

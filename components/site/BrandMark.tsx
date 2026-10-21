@@ -5,8 +5,8 @@ type BrandMarkProps = {
 };
 
 export function BrandMark({ size = 34, variant = "light", withTagline = true }: BrandMarkProps) {
-  const ink = variant === "light" ? "#ffffff" : "#1c7a58";
-  const soft = variant === "light" ? "#eafff6" : "#5fa78e";
+  const ink = variant === "light" ? "#ffffff" : "#8f0b1f";
+  const soft = variant === "light" ? "#ffe9ec" : "#8a5b62";
 
   return (
     <span className="brand_mark">
@@ -24,7 +24,7 @@ export function BrandMark({ size = 34, variant = "light", withTagline = true }: 
         />
         <path
           d="M14.7 24.4C14.7 27.4 16.8 29.6 19.6 29.6"
-          stroke={variant === "light" ? "#3cc78f" : "#ffffff"}
+          stroke={variant === "light" ? "#c8102e" : "#ffffff"}
           strokeWidth="2.2"
           strokeLinecap="round"
         />

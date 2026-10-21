@@ -44,43 +44,43 @@ export function NotificationSettings({
   return (
     <div className="flat_card">
       <div className="flex items-center gap-2">
-        <BellRing size={18} className="text-[#3cc78f]" aria-hidden="true" />
+        <BellRing size={18} className="text-[#c8102e]" aria-hidden="true" />
         <h2 className="text-[22px]">Urgent request alerts</h2>
       </div>
-      <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[#6b6a6a]">
+      <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
         Choose how hospitals reach you when your blood type is needed nearby. You can pause alerts at any
         time.
       </p>
 
       <div className="mt-4 grid gap-3">
-        <label className="flex cursor-pointer items-center justify-between gap-4 rounded-[7px] border border-[#eef0f3] px-4 py-3">
+        <label className="flex cursor-pointer items-center justify-between gap-4 rounded-[7px] border border-[#f2e6e7] px-4 py-3">
           <span className="flex items-center gap-3">
-            <Mail size={17} className="text-[#3cc78f]" aria-hidden="true" />
+            <Mail size={17} className="text-[#c8102e]" aria-hidden="true" />
             <span>
-              <span className="block font-body text-[14px] font-semibold text-[#222222]">Email alerts</span>
-              <span className="block font-body text-[12.5px] text-[#8a8a8a]">Sent to your registered address</span>
+              <span className="block font-body text-[14px] font-semibold text-[#2b1417]">Email alerts</span>
+              <span className="block font-body text-[12.5px] text-[#7f7174]">Sent to your registered address</span>
             </span>
           </span>
           <input
             type="checkbox"
-            className="h-5 w-5 accent-[#3cc78f]"
+            className="h-5 w-5 accent-[#c8102e]"
             checked={settings.email}
             disabled={saving === "email"}
             onChange={(event) => void update("email", event.target.checked)}
           />
         </label>
 
-        <label className="flex cursor-pointer items-center justify-between gap-4 rounded-[7px] border border-[#eef0f3] px-4 py-3">
+        <label className="flex cursor-pointer items-center justify-between gap-4 rounded-[7px] border border-[#f2e6e7] px-4 py-3">
           <span className="flex items-center gap-3">
-            <MessageCircle size={17} className="text-[#3cc78f]" aria-hidden="true" />
+            <MessageCircle size={17} className="text-[#c8102e]" aria-hidden="true" />
             <span>
-              <span className="block font-body text-[14px] font-semibold text-[#222222]">WhatsApp alerts</span>
-              <span className="block font-body text-[12.5px] text-[#8a8a8a]">Sent to your registered number</span>
+              <span className="block font-body text-[14px] font-semibold text-[#2b1417]">WhatsApp alerts</span>
+              <span className="block font-body text-[12.5px] text-[#7f7174]">Sent to your registered number</span>
             </span>
           </span>
           <input
             type="checkbox"
-            className="h-5 w-5 accent-[#3cc78f]"
+            className="h-5 w-5 accent-[#c8102e]"
             checked={settings.whatsapp}
             disabled={saving === "whatsapp"}
             onChange={(event) => void update("whatsapp", event.target.checked)}
@@ -89,7 +89,7 @@ export function NotificationSettings({
       </div>
 
       {status ? (
-        <p className="mt-3 font-body text-[12.5px] text-[#2f7f62]" role="status">
+        <p className="mt-3 font-body text-[12.5px] text-[#8b2531]" role="status">
           {status}
         </p>
       ) : null}
