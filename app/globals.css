@@ -116,7 +116,7 @@
 
 /* ------------------------------------------------------------------
    Design tokens
-   Blood donation palette: crimson primary, warm maroon ink, rose surfaces.
+   Blood donation palette: warm brick primary, brown ink, linen surfaces.
    Bootstrap custom properties are carried over so legacy markup keeps working.
 ------------------------------------------------------------------- */
 :root {
@@ -139,7 +139,7 @@
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #fbf6f6;
+  --light: #faf5f1;
   --dark: #343a40;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -147,52 +147,52 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
 
-  --heading-color: #2b1417;
-  --heading-color-deep: #2a1215;
-  --gray-color: #6d5f62;
-  --gray-color-2: #d3c6c8;
-  --gray-color-3: #d3c6c8;
+  --heading-color: #33231e;
+  --heading-color-deep: #32221d;
+  --gray-color: #6d5f59;
+  --gray-color-2: #d6c9c2;
+  --gray-color-3: #d6c9c2;
   --gray-color-4: #214dac;
   --theme-color: #26bef2;
-  --theme-color-2: #de4b3b;
-  --btn-bg: #c8102e;
-  --btn-hover: #9a0c22;
-  --section-bg: #fbf6f6;
-  --section-bg-1: #463b3d;
-  --heading-color-2: #b45309;
-  --footer-bg: #2f1c1f;
-  --sidebar-bg: #fdf7f7;
+  --theme-color-2: #c2543c;
+  --btn-bg: #ad4a3a;
+  --btn-hover: #8a382b;
+  --section-bg: #faf5f1;
+  --section-bg-1: #463d38;
+  --heading-color-2: #a26217;
+  --footer-bg: #2f201b;
+  --sidebar-bg: #fdf8f4;
   --border-color: #fdcb9e;
-  --font-1: #685b5d;
-  --font-2: #7d6c6f;
-  --font-3: #817073;
-  --font-4: #7f7174;
-  --font-5: #9a8c8f;
-  --font-6: #685b5d;
-  --font-7: #5f5254;
-  --font-8: #fdf7f8;
-  --danger-soft: #d92d20;
-  --danger-strong: #b00020;
-  --footer-surface: #fff4f5;
-  --rose-soft: #fdeef0;
-  --brand-ink: #47070f;
+  --font-1: #6a5c56;
+  --font-2: #7c6f68;
+  --font-3: #7f726c;
+  --font-4: #7d716a;
+  --font-5: #9a8c85;
+  --font-6: #6a5c56;
+  --font-7: #63544e;
+  --font-8: #fdf8f5;
+  --danger-soft: #c0442f;
+  --danger-strong: #9c2f26;
+  --footer-surface: #fdf4f0;
+  --rose-soft: #fceee8;
+  --brand-ink: #46241d;
 }
 
 @theme inline {
-  --color-brand: #c8102e;
-  --color-brand-dark: #9a0c22;
-  --color-brand-ink: #47070f;
-  --color-ink: #2b1417;
-  --color-heading: #2a1215;
-  --color-body: #5f5254;
-  --color-muted: #7d6c6f;
-  --color-soft: #fbf6f6;
-  --color-mist: #fdf7f8;
-  --color-footer: #fff4f5;
-  --color-coral: #de4b3b;
-  --color-amber: #b45309;
-  --color-critical: #b00020;
-  --color-line: #f2e7e8;
+  --color-brand: #ad4a3a;
+  --color-brand-dark: #8a382b;
+  --color-brand-ink: #46241d;
+  --color-ink: #33231e;
+  --color-heading: #32221d;
+  --color-body: #63544e;
+  --color-muted: #7c6f68;
+  --color-soft: #faf5f1;
+  --color-mist: #fdf8f5;
+  --color-footer: #fdf4f0;
+  --color-coral: #c2543c;
+  --color-amber: #a26217;
+  --color-critical: #9c2f26;
+  --color-line: #f1e6e0;
 
   --font-display: "Yeseva One", cursive;
   --font-body: "Open Sans", sans-serif;
@@ -281,12 +281,12 @@ label {
 }
 
 ::selection {
-  background: #c8102e;
+  background: #ad4a3a;
   color: #ffffff;
 }
 
 :focus-visible {
-  outline: 2px solid #c8102e;
+  outline: 2px solid #ad4a3a;
   outline-offset: 2px;
 }
 
@@ -381,7 +381,7 @@ label {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #c8102e;
+  color: #ad4a3a;
   display: inline-block;
 }
 
@@ -410,38 +410,38 @@ label {
 
 .boxed-btn {
   background: #ffffff;
-  color: #c8102e;
-  border: 1px solid #c8102e;
+  color: #ad4a3a;
+  border: 1px solid #ad4a3a;
   border-radius: 3px;
   font-weight: 400;
 }
 
 .boxed-btn:hover {
-  background: #c8102e;
+  background: #ad4a3a;
   color: #ffffff;
 }
 
 .boxed-btn3 {
   background: #ffffff;
-  color: #2b1417;
+  color: #33231e;
   border: 0;
 }
 
 .boxed-btn3:hover {
-  background: #c8102e;
+  background: #ad4a3a;
   color: #ffffff;
 }
 
 .boxed-btn4 {
-  background: #c8102e;
+  background: #ad4a3a;
   color: #ffffff;
   border: 1px solid transparent;
 }
 
 .boxed-btn4:hover {
   background: #ffffff;
-  color: #c8102e;
-  border-color: #c8102e;
+  color: #ad4a3a;
+  border-color: #ad4a3a;
 }
 
 .boxed-btn5 {
@@ -456,7 +456,7 @@ label {
 
 .boxed-btn5:hover {
   background: #ffffff;
-  color: #2b1417;
+  color: #33231e;
 }
 
 .btn-disabled,
@@ -486,11 +486,11 @@ label {
 }
 
 .read_more:hover {
-  color: #c8102e;
+  color: #ad4a3a;
 }
 
 .read_more:hover::before {
-  background: #c8102e;
+  background: #ad4a3a;
 }
 
 /* ------------------------------------------------------------------
@@ -498,7 +498,7 @@ label {
 ------------------------------------------------------------------- */
 .top_strip {
   background: #ffffff;
-  border-bottom: 1px solid #f4eaeb;
+  border-bottom: 1px solid #f2e7e1;
 }
 
 .top_strip_inner {
@@ -515,7 +515,7 @@ label {
   gap: 22px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: #7d6c6f;
+  color: #7c6f68;
 }
 
 .short_contact_list a {
@@ -526,18 +526,18 @@ label {
 }
 
 .short_contact_list a:hover {
-  color: #c8102e;
+  color: #ad4a3a;
 }
 
 .short_contact_list svg {
-  color: #c8102e;
+  color: #ad4a3a;
 }
 
 .social_media_links {
   display: flex;
   align-items: center;
   gap: 18px;
-  color: #7f7174;
+  color: #7d716a;
 }
 
 .social_media_links a {
@@ -545,18 +545,18 @@ label {
 }
 
 .social_media_links a:hover {
-  color: #c8102e;
+  color: #ad4a3a;
 }
 
 .main-header-area {
-  background: #c8102e;
+  background: #ad4a3a;
   border-radius: 10px;
   padding: 18px 30px;
   position: sticky;
   top: 12px;
   z-index: 999;
   margin-top: 16px;
-  box-shadow: 0 8px 20px rgba(71, 7, 15, 0.16);
+  box-shadow: 0 8px 20px rgba(70, 36, 29, 0.16);
 }
 
 .header_row {
@@ -591,7 +591,7 @@ label {
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #ffe9ec;
+  color: #fbe9e3;
   margin-top: 4px;
 }
 
@@ -616,11 +616,11 @@ label {
 }
 
 .main-menu a.nav-link:hover {
-  color: #2b1417;
+  color: #33231e;
 }
 
 .main-menu a.nav-link[aria-current="page"] {
-  color: #3f0a12;
+  color: #3d221c;
   background: rgba(255, 255, 255, 0.22);
 }
 
@@ -632,7 +632,7 @@ label {
 
 .book_btn {
   background: #ffffff;
-  color: #2b1417;
+  color: #33231e;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -645,7 +645,7 @@ label {
 }
 
 .book_btn:hover {
-  color: #c8102e;
+  color: #ad4a3a;
 }
 
 .nav_signin {
@@ -660,7 +660,7 @@ label {
 }
 
 .nav_signin:hover {
-  color: #2b1417;
+  color: #33231e;
 }
 
 .mobile_toggle {
@@ -741,16 +741,16 @@ label {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 600;
-    color: #2b1417;
+    color: #33231e;
     padding: 10px 12px;
     border-radius: 4px;
   }
   .mobile_panel a:hover {
-    background: #fff4f5;
-    color: #9a0c22;
+    background: #fdf4f0;
+    color: #8a382b;
   }
   .mobile_panel .mobile_cta {
-    background: #c8102e;
+    background: #ad4a3a;
     color: #ffffff;
     text-align: center;
     margin-top: 8px;
@@ -769,7 +769,7 @@ label {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #c8102e;
+  background-color: #ad4a3a;
   opacity: 0.26;
   z-index: -1;
 }
@@ -789,7 +789,7 @@ label {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #2c0810;
+  background-color: #32201a;
   opacity: 0.46;
   z-index: -1;
 }
@@ -798,7 +798,7 @@ label {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(38, 7, 12, 0.68) 0%, rgba(38, 7, 12, 0.24) 62%, rgba(38, 7, 12, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(45, 26, 20, 0.68) 0%, rgba(45, 26, 20, 0.24) 62%, rgba(45, 26, 20, 0.5) 100%);
   z-index: -1;
 }
 
@@ -893,7 +893,7 @@ label {
 }
 
 .bradcam_area {
-  background: #250609;
+  background: #2b1a15;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -909,7 +909,7 @@ label {
   content: "";
   position: absolute;
   inset: 0;
-  background: #47070f;
+  background: #46241d;
   opacity: 0.72;
   z-index: -1;
 }
@@ -998,14 +998,14 @@ label {
 
 .flat_card {
   background: #ffffff;
-  border: 1px solid #f4eaeb;
+  border: 1px solid #f2e7e1;
   border-radius: 7px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
   padding: 30px;
 }
 
 .soft_card {
-  background: #fdf7f8;
+  background: #fdf8f5;
   border-radius: 7px;
   padding: 30px;
 }
@@ -1016,7 +1016,7 @@ label {
 
 .hover_lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 26px rgba(71, 7, 15, 0.14);
+  box-shadow: 0 14px 26px rgba(70, 36, 29, 0.14);
 }
 
 /* ------------------------------------------------------------------
@@ -1038,18 +1038,18 @@ label {
 }
 
 .badge_critical {
-  background: #b00020;
+  background: #9c2f26;
   color: #ffffff;
 }
 
 .badge_urgent {
-  background: #b45309;
+  background: #a26217;
   color: #ffffff;
 }
 
 .badge_standard {
-  background: #fbe4e7;
-  color: #8f0b1f;
+  background: #f7e3dc;
+  color: #8a3a2c;
 }
 
 .blood_badge {
@@ -1059,8 +1059,8 @@ label {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  background: #fbe4e7;
-  color: #8f0b1f;
+  background: #f7e3dc;
+  color: #8a3a2c;
   min-width: 54px;
   padding: 8px 10px;
   font-size: 18px;
@@ -1078,14 +1078,14 @@ label {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #fff4f5;
-  color: #8b2531;
+  background: #fdf4f0;
+  color: #8a4a3c;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
   padding: 7px 12px;
   border-radius: 999px;
-  border: 1px solid #f4d9dd;
+  border: 1px solid #efd9d0;
 }
 
 /* ------------------------------------------------------------------
@@ -1099,7 +1099,7 @@ label {
 
 .blood_cell {
   background: #ffffff;
-  border: 1px solid #f2e6e7;
+  border: 1px solid #f1e5df;
   border-radius: 7px;
   padding: 20px 18px;
   transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -1108,10 +1108,10 @@ label {
 }
 
 .blood_cell:hover {
-  background: #fff4f5;
-  border-color: #c8102e;
+  background: #fdf4f0;
+  border-color: #ad4a3a;
   transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(71, 7, 15, 0.14);
+  box-shadow: 0 10px 22px rgba(70, 36, 29, 0.14);
 }
 
 .blood_cell strong {
@@ -1119,7 +1119,7 @@ label {
   font-family: "Open Sans", sans-serif;
   font-size: 26px;
   font-weight: 800;
-  color: #2a1215;
+  color: #32221d;
   line-height: 1.1;
 }
 
@@ -1127,7 +1127,7 @@ label {
   display: block;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  color: #6d5f62;
+  color: #6d5f59;
   line-height: 1.55;
   margin-top: 8px;
 }
@@ -1142,9 +1142,9 @@ label {
    Impact band, mirroring the template counter band
 ------------------------------------------------------------------- */
 .impact_band {
-  background: #c8102e;
+  background: #ad4a3a;
   background-image: radial-gradient(circle at 12% 20%, rgba(255, 255, 255, 0.16), transparent 46%),
-    radial-gradient(circle at 88% 82%, rgba(38, 7, 12, 0.26), transparent 52%);
+    radial-gradient(circle at 88% 82%, rgba(45, 26, 20, 0.26), transparent 52%);
   border-radius: 7px;
   overflow: hidden;
   padding: 56px 24px;
@@ -1199,7 +1199,7 @@ label {
 .field > label {
   font-size: 13px;
   font-weight: 600;
-  color: #4c4244;
+  color: #4d4340;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -1207,14 +1207,14 @@ label {
 .select_base,
 .textarea_base {
   width: 100%;
-  background: #fdf7f8;
-  border: 1px solid #f1e5e6;
+  background: #fdf8f5;
+  border: 1px solid #f0e4de;
   border-radius: 3px;
   min-height: 48px;
   padding: 11px 16px;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
-  color: #2b1417;
+  color: #33231e;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
@@ -1236,13 +1236,13 @@ label {
 .textarea_base:focus {
   outline: none;
   background: #ffffff;
-  border-color: #c8102e;
-  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.14);
+  border-color: #ad4a3a;
+  box-shadow: 0 0 0 3px rgba(173, 74, 58, 0.14);
 }
 
 .input_base::placeholder,
 .textarea_base::placeholder {
-  color: #a8979a;
+  color: #a69891;
 }
 
 .field_error {
@@ -1257,7 +1257,7 @@ label {
   align-items: flex-start;
   gap: 10px;
   padding: 10px 0;
-  border-bottom: 1px dashed #f2e7e8;
+  border-bottom: 1px dashed #f1e6e0;
 }
 
 .check_row:last-child {
@@ -1268,7 +1268,7 @@ label {
   width: 18px;
   height: 18px;
   margin-top: 3px;
-  accent-color: #c8102e;
+  accent-color: #ad4a3a;
   flex: none;
 }
 
@@ -1276,17 +1276,17 @@ label {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: #4f4345;
+  color: #4f4441;
 }
 
 .form_note {
-  background: #fff4f5;
-  border: 1px solid #f4d9dd;
+  background: #fdf4f0;
+  border: 1px solid #efd9d0;
   border-radius: 7px;
   padding: 14px 16px;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  color: #8b2531;
+  color: #8a4a3c;
   line-height: 1.6;
 }
 
@@ -1315,18 +1315,18 @@ label {
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #7f7174;
+  color: #7d716a;
   font-weight: 700;
   padding: 12px 14px;
-  border-bottom: 1px solid #f2e7e8;
+  border-bottom: 1px solid #f1e6e0;
   white-space: nowrap;
 }
 
 .data_table td {
   padding: 14px;
-  border-bottom: 1px solid #f7eeef;
+  border-bottom: 1px solid #f7ede7;
   font-size: 14px;
-  color: #4c4244;
+  color: #4d4340;
   vertical-align: middle;
 }
 
@@ -1342,15 +1342,15 @@ label {
    Footer
 ------------------------------------------------------------------- */
 .site_footer {
-  background: #fff4f5;
+  background: #fdf4f0;
   padding-top: 84px;
-  color: #5f5254;
+  color: #63544e;
 }
 
 .footer_title {
   font-family: "Yeseva One", cursive;
   font-size: 20px;
-  color: #2a1215;
+  color: #32221d;
   padding-bottom: 18px;
   margin-bottom: 18px;
   position: relative;
@@ -1363,7 +1363,7 @@ label {
   bottom: 0;
   width: 44px;
   height: 2px;
-  background: #c8102e;
+  background: #ad4a3a;
 }
 
 .footer_links li {
@@ -1373,12 +1373,12 @@ label {
 .footer_links a {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
-  color: #716365;
+  color: #71645e;
   transition: color 0.3s ease, padding 0.3s ease;
 }
 
 .footer_links a:hover {
-  color: #c8102e;
+  color: #ad4a3a;
   padding-left: 4px;
 }
 
@@ -1386,12 +1386,12 @@ label {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   line-height: 1.9;
-  color: #716365;
+  color: #71645e;
 }
 
 .footer_bottom {
   margin-top: 54px;
-  border-top: 1px solid #f4d9dd;
+  border-top: 1px solid #efd9d0;
   padding: 22px 0;
   display: flex;
   flex-wrap: wrap;
@@ -1400,7 +1400,7 @@ label {
   gap: 12px;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  color: #7f6b6f;
+  color: #7d6e67;
 }
 
 /* ------------------------------------------------------------------
@@ -1409,7 +1409,7 @@ label {
 .modal_backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(26, 5, 9, 0.6);
+  background: rgba(32, 14, 10, 0.6);
   backdrop-filter: blur(2px);
   z-index: 10000;
   display: flex;
@@ -1432,102 +1432,6 @@ label {
 .modal_panel h2 {
   font-size: 26px;
   margin-bottom: 6px;
-}
-
-/* ------------------------------------------------------------------
-   Preloader
-------------------------------------------------------------------- */
-.preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 10001;
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  animation: preloader_failsafe 0.4s ease 4.5s forwards;
-}
-
-@keyframes preloader_failsafe {
-  to {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-}
-
-.preloader .counter {
-  font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: #c8102e;
-}
-
-.preloader .label {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #9c8f91;
-}
-
-.drop_fall {
-  animation: drop_fall 1.15s cubic-bezier(0.55, 0.06, 0.68, 0.19) infinite;
-  transform-origin: center;
-}
-
-.ripple_one {
-  animation: ripple 1.15s ease-out infinite;
-  transform-origin: center;
-}
-
-.ripple_two {
-  animation: ripple 1.15s ease-out infinite;
-  animation-delay: 0.18s;
-  transform-origin: center;
-}
-
-@keyframes drop_fall {
-  0% {
-    transform: translateY(-16px) scale(0.98);
-    opacity: 0;
-  }
-  22% {
-    opacity: 1;
-  }
-  62% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(0) scaleY(0.82) scaleX(1.16);
-  }
-  78% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-16px) scale(0.98);
-    opacity: 0;
-  }
-}
-
-@keyframes ripple {
-  0%,
-  58% {
-    transform: scale(0.2);
-    opacity: 0;
-  }
-  64% {
-    opacity: 0.55;
-  }
-  100% {
-    transform: scale(1.7);
-    opacity: 0;
-  }
 }
 
 /* ------------------------------------------------------------------
@@ -1571,11 +1475,9 @@ label {
 
 @keyframes whatsapp_entry {
   from {
-    opacity: 0;
-    transform: scale(0.6);
+    transform: scale(0.75);
   }
   to {
-    opacity: 1;
     transform: scale(1);
   }
 }
@@ -1597,8 +1499,8 @@ label {
 
 .voice_btn {
   left: 24px;
-  background: #c8102e;
-  box-shadow: 0 10px 24px rgba(71, 7, 15, 0.26);
+  background: #ad4a3a;
+  box-shadow: 0 10px 24px rgba(70, 36, 29, 0.26);
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -1611,7 +1513,7 @@ label {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px solid rgba(200, 16, 46, 0.7);
+  border: 2px solid rgba(173, 74, 58, 0.7);
   animation: voice_ring 1.4s ease-out infinite;
 }
 
@@ -1629,7 +1531,7 @@ label {
 .floating_tip {
   position: absolute;
   bottom: 66px;
-  background: #2b1417;
+  background: #33231e;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -1649,7 +1551,7 @@ label {
   width: 0;
   height: 0;
   border: 5px solid transparent;
-  border-top-color: #2b1417;
+  border-top-color: #33231e;
 }
 
 .voice_btn .floating_tip {
@@ -1680,10 +1582,10 @@ label {
 @keyframes request_pulse {
   0%,
   100% {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(176, 0, 32, 0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 0 0 0 rgba(156, 47, 38, 0);
   }
   50% {
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1), 0 0 0 6px rgba(176, 0, 32, 0.1);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1), 0 0 0 6px rgba(156, 47, 38, 0.1);
   }
 }
 
@@ -1709,10 +1611,10 @@ label {
 ------------------------------------------------------------------- */
 .partner_strip {
   overflow: hidden;
-  border-top: 1px solid #f2e6e7;
-  border-bottom: 1px solid #f2e6e7;
+  border-top: 1px solid #f1e5df;
+  border-bottom: 1px solid #f1e5df;
   padding: 22px 0;
-  background: #fdf9f9;
+  background: #fdf9f6;
 }
 
 .partner_track {
@@ -1727,9 +1629,9 @@ label {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #6f5257;
+  color: #6f5b55;
   background: #ffffff;
-  border: 1px solid #f0e5e6;
+  border: 1px solid #efe4dd;
   border-radius: 999px;
   padding: 9px 16px;
   white-space: nowrap;
@@ -1739,7 +1641,6 @@ label {
    Print
 ------------------------------------------------------------------- */
 @media print {
-  .preloader,
   .floating_btn,
   .floating_tip,
   .modal_backdrop,
@@ -1747,18 +1648,13 @@ label {
   .main-header-area {
     display: none !important;
   }
-
-  [data-reveal] {
-    opacity: 1 !important;
-    transform: none !important;
-  }
 }
 
 /* ------------------------------------------------------------------
    Utility
 ------------------------------------------------------------------- */
 .text_link {
-  color: #9a0c22;
+  color: #8a382b;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   text-decoration: underline;
@@ -1766,12 +1662,12 @@ label {
 }
 
 .text_link:hover {
-  color: #47070f;
+  color: #46241d;
 }
 
 .divider {
   height: 1px;
-  background: #f2e7e8;
+  background: #f1e6e0;
   width: 100%;
 }
 
@@ -1788,7 +1684,7 @@ label {
   gap: 8px;
   border: 1px solid #e8dcdd;
   background: #ffffff;
-  color: #4d4345;
+  color: #4d4440;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -1799,13 +1695,13 @@ label {
 }
 
 .pill_toggle:hover {
-  border-color: #c8102e;
-  color: #9a0c22;
+  border-color: #ad4a3a;
+  color: #8a382b;
 }
 
 .pill_toggle[data-active="true"] {
-  background: #c8102e;
-  border-color: #c8102e;
+  background: #ad4a3a;
+  border-color: #ad4a3a;
   color: #ffffff;
 }
 
@@ -1824,7 +1720,7 @@ label {
   font-family: "Open Sans", sans-serif;
   font-size: 15.5px;
   line-height: 1.9;
-  color: #5f5254;
+  color: #63544e;
   margin-bottom: 12px;
 }
 
@@ -1839,12 +1735,12 @@ label {
 }
 
 .legal_body a {
-  color: #9a0c22;
+  color: #8a382b;
   text-decoration: underline;
 }
 
 .faq_item {
-  border-bottom: 1px solid #f2e7e8;
+  border-bottom: 1px solid #f1e6e0;
 }
 
 .faq_trigger {
@@ -1860,7 +1756,7 @@ label {
   text-align: left;
   font-family: "Yeseva One", cursive;
   font-size: 18px;
-  color: #2b1417;
+  color: #33231e;
 }
 
 .faq_panel {

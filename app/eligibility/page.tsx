@@ -71,11 +71,11 @@ export default function EligibilityPage() {
               const Icon = icons[index % icons.length];
               return (
                 <div className="flat_card hover_lift" key={fact.title}>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fdf1f2] text-[#9a0c22]">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#fdf1f2] text-[#8a382b]">
                     <Icon size={18} aria-hidden="true" />
                   </span>
                   <h2 className="mt-3 text-[19px]">{fact.title}</h2>
-                  <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5f5254]">{fact.body}</p>
+                  <p className="mt-2 font-body text-[13px] leading-relaxed text-[#63544e]">{fact.body}</p>
                 </div>
               );
             })}
@@ -84,7 +84,7 @@ export default function EligibilityPage() {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="flat_card">
               <div className="flex items-center gap-2">
-                <ShieldCheck size={19} className="text-[#c8102e]" aria-hidden="true" />
+                <ShieldCheck size={19} className="text-[#ad4a3a]" aria-hidden="true" />
                 <h2 className="text-[24px]">You can usually donate if</h2>
               </div>
               <ul className="mt-4 grid gap-3">
@@ -96,8 +96,8 @@ export default function EligibilityPage() {
                   "You are not pregnant and have not given birth in the last 6 months.",
                 ].map((line) => (
                   <li key={line} className="flex items-start gap-2.5">
-                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#c8102e]" aria-hidden="true" />
-                    <span className="font-body text-[13.5px] leading-relaxed text-[#5f5254]">{line}</span>
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#ad4a3a]" aria-hidden="true" />
+                    <span className="font-body text-[13.5px] leading-relaxed text-[#63544e]">{line}</span>
                   </li>
                 ))}
               </ul>
@@ -105,18 +105,18 @@ export default function EligibilityPage() {
 
             <div className="flat_card">
               <div className="flex items-center gap-2">
-                <XCircle size={19} className="text-[#d92d20]" aria-hidden="true" />
+                <XCircle size={19} className="text-[#c0442f]" aria-hidden="true" />
                 <h2 className="text-[24px]">Please wait if</h2>
               </div>
               <ul className="mt-4 grid gap-3">
                 {disqualifiers.map((line) => (
                   <li key={line} className="flex items-start gap-2.5">
-                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#d92d20]" aria-hidden="true" />
-                    <span className="font-body text-[13.5px] leading-relaxed text-[#5f5254]">{line}</span>
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#c0442f]" aria-hidden="true" />
+                    <span className="font-body text-[13.5px] leading-relaxed text-[#63544e]">{line}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 font-body text-[12.5px] leading-relaxed text-[#7f7174]">
+              <p className="mt-4 font-body text-[12.5px] leading-relaxed text-[#7d716a]">
                 This list is guidance, not a medical decision. The screening nurse at the blood bank makes
                 the final call on the day.
               </p>
@@ -127,7 +127,7 @@ export default function EligibilityPage() {
             <div>
               <span className="eyebrow">Questions donors ask</span>
               <h2 className="mt-3 text-[34px]">Before you roll up a sleeve</h2>
-              <p className="mt-3 max-w-md font-body text-[14px] leading-relaxed text-[#6d5f62]">
+              <p className="mt-3 max-w-md font-body text-[14px] leading-relaxed text-[#6d5f59]">
                 Still unsure? Message a coordinator on WhatsApp with your question. We answer in English and
                 Kiswahili, and we will never pressure you to donate.
               </p>

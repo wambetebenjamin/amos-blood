@@ -70,14 +70,14 @@ export function SignInForm({
 
   return (
     <div className="flat_card">
-      <div className="mb-5 flex gap-2 rounded-[5px] bg-[#f7f0f0] p-1">
+      <div className="mb-5 flex gap-2 rounded-[5px] bg-[#f6efe9] p-1">
         {(["donor", "hospital"] as const).map((option) => (
           <button
             key={option}
             type="button"
             onClick={() => setRole(option)}
             className={`flex-1 rounded-[4px] px-3 py-2.5 font-body text-[13.5px] font-semibold transition ${
-              role === option ? "bg-white text-[#8f0b1f] shadow-sm" : "text-[#7d6c6f]"
+              role === option ? "bg-white text-[#8a3a2c] shadow-sm" : "text-[#7c6f68]"
             }`}
             aria-pressed={role === option}
           >
@@ -132,9 +132,9 @@ export function SignInForm({
         {googleEnabled ? (
           <>
             <div className="flex items-center gap-3">
-              <span className="h-px flex-1 bg-[#f2e7e8]" aria-hidden="true" />
-              <span className="font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">or</span>
-              <span className="h-px flex-1 bg-[#f2e7e8]" aria-hidden="true" />
+              <span className="h-px flex-1 bg-[#f1e6e0]" aria-hidden="true" />
+              <span className="font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">or</span>
+              <span className="h-px flex-1 bg-[#f1e6e0]" aria-hidden="true" />
             </div>
             <button
               type="button"
@@ -149,7 +149,7 @@ export function SignInForm({
         <RecaptchaNotice />
       </form>
 
-      <p className="mt-5 font-body text-[13px] leading-relaxed text-[#6d5f62]">
+      <p className="mt-5 font-body text-[13px] leading-relaxed text-[#6d5f59]">
         New here?{" "}
         <Link href="/register-donor" className="text_link">
           Register as a donor
@@ -161,12 +161,12 @@ export function SignInForm({
         .
       </p>
 
-      <div className="mt-5 rounded-[7px] border border-[#fbe4e7] bg-[#fff4f5] p-4">
-        <p className="flex items-center gap-2 font-body text-[12.5px] font-semibold text-[#8f0b1f]">
+      <div className="mt-5 rounded-[7px] border border-[#f7e3dc] bg-[#fdf4f0] p-4">
+        <p className="flex items-center gap-2 font-body text-[12.5px] font-semibold text-[#8a3a2c]">
           <ShieldCheck size={14} aria-hidden="true" />
           Preview access
         </p>
-        <p className="mt-1 font-body text-[12.5px] leading-relaxed text-[#7e4a52]">
+        <p className="mt-1 font-body text-[12.5px] leading-relaxed text-[#7d5a50]">
           Any email and a password of 6 or more characters opens the dashboards in this environment.
           Connect Google OAuth or your hospital directory before going live.
         </p>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { Filter, RotateCcw } from "lucide-react";
 import { RequestCard } from "@/components/requests/RequestCard";
 import { bloodTypes, urgencyLevels, urgencyLabels, type Urgency } from "@/lib/blood";
@@ -37,15 +36,15 @@ export function RequestBoard({ requests }: { requests: BloodRequest[] }) {
     <div>
       <div className="flat_card mb-8">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="flex items-center gap-2 font-body text-[13px] font-semibold text-[#2a1215]">
-            <Filter size={15} className="text-[#c8102e]" aria-hidden="true" />
+          <span className="flex items-center gap-2 font-body text-[13px] font-semibold text-[#32221d]">
+            <Filter size={15} className="text-[#ad4a3a]" aria-hidden="true" />
             Filter requests
           </span>
           {activeFilterCount > 0 ? (
             <button
               type="button"
               onClick={() => setFilters(initialFilters)}
-              className="ml-auto inline-flex items-center gap-1.5 font-body text-[12.5px] font-semibold text-[#7d6c6f] underline underline-offset-4 hover:text-[#9a0c22]"
+              className="ml-auto inline-flex items-center gap-1.5 font-body text-[12.5px] font-semibold text-[#7c6f68] underline underline-offset-4 hover:text-[#8a382b]"
             >
               <RotateCcw size={13} aria-hidden="true" />
               Clear {activeFilterCount} filter{activeFilterCount === 1 ? "" : "s"}
@@ -123,45 +122,28 @@ export function RequestBoard({ requests }: { requests: BloodRequest[] }) {
               {urgencyLabels[level]}
             </button>
           ))}
-          <span className="ml-auto self-center font-body text-[12.5px] text-[#7f7174]">
+          <span className="ml-auto self-center font-body text-[12.5px] text-[#7d716a]">
             {filtered.length} live request{filtered.length === 1 ? "" : "s"}
           </span>
         </div>
       </div>
 
-      <AnimatePresence>
-        {notice ? (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            className="form_note mb-6"
-            role="status"
-          >
-            {notice}
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      {notice ? (
+        <div className="form_note mb-6" role="status">
+          {notice}
+        </div>
+      ) : null}
 
-      <motion.div layout className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        <AnimatePresence mode="popLayout">
-          {filtered.map((request, index) => (
-            <motion.div
-              key={request.ref}
-              layout
-              exit={{ opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.24 }}
-            >
-              <RequestCard request={request} index={index} onResponded={setNotice} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {filtered.map((request, index) => (
+          <RequestCard key={request.ref} request={request} index={index} onResponded={setNotice} />
+        ))}
+      </div>
 
       {filtered.length === 0 ? (
         <div className="flat_card mt-6 text-center">
           <h3 className="text-[22px]">No requests match these filters</h3>
-          <p className="mt-2 font-body text-[14px] text-[#6d5f62]">
+          <p className="mt-2 font-body text-[14px] text-[#6d5f59]">
             Try a different blood type or county, or clear the filters to see the full board.
           </p>
           <button type="button" className="boxed-btn mt-4" onClick={() => setFilters(initialFilters)}>

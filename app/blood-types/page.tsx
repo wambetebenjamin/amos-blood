@@ -36,7 +36,7 @@ export default function BloodTypesPage() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">Compatibility guide</span>
             <h2 className="mt-3 text-[36px]">Eight types. One shared system.</h2>
-            <p className="mt-3 font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-3 font-body text-[14.5px] leading-relaxed text-[#6d5f59]">
               Your blood type is set by two markers on your red cells: the ABO group and the Rh factor. The
               table below shows what you can give and receive. Hospitals still type and cross match every
               unit before transfusion, so this is education, not a clinical instruction.
@@ -74,11 +74,11 @@ export default function BloodTypesPage() {
               <div className="flat_card hover_lift" key={type}>
                 <div className="flex items-center justify-between gap-2">
                   <BloodTypeBadge bloodType={type} />
-                  <span className="font-body text-[11.5px] uppercase tracking-[0.08em] text-[#7f7174]">
+                  <span className="font-body text-[11.5px] uppercase tracking-[0.08em] text-[#7d716a]">
                     {rarity[type]}
                   </span>
                 </div>
-                <p className="mt-3 font-body text-[13px] leading-relaxed text-[#5f5254]">
+                <p className="mt-3 font-body text-[13px] leading-relaxed text-[#63544e]">
                   {compatibility[type].note}
                 </p>
               </div>
@@ -104,8 +104,8 @@ export default function BloodTypesPage() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-[7px] bg-[#fbf6f6] px-6 py-5">
-            <p className="max-w-2xl font-body text-[13.5px] leading-relaxed text-[#5f5254]">
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-[7px] bg-[#faf5f1] px-6 py-5">
+            <p className="max-w-2xl font-body text-[13.5px] leading-relaxed text-[#63544e]">
               Not sure of your type? Register anyway. We record what you know and the blood bank confirms the
               rest on your first donation.
             </p>

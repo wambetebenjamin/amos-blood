@@ -27,29 +27,29 @@ export function DonorDashboardView({
     <div className="grid gap-6">
       <div className="grid gap-4 md:grid-cols-3">
         <div className="flat_card">
-          <p className="font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">Donor ID</p>
-          <p className="mt-1 font-body text-[18px] font-bold text-[#2a1215]">{donor.id}</p>
+          <p className="font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">Donor ID</p>
+          <p className="mt-1 font-body text-[18px] font-bold text-[#32221d]">{donor.id}</p>
           <div className="mt-3">
             <BloodTypeBadge bloodType={donor.bloodType} />
           </div>
         </div>
         <div className="flat_card">
-          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">
+          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">
             <MapPin size={13} aria-hidden="true" />
             County
           </p>
-          <p className="mt-1 font-body text-[18px] font-semibold text-[#2a1215]">{donor.county}</p>
-          <p className="mt-2 font-body text-[12.5px] text-[#7f7174]">{donor.subCounty} sub county</p>
+          <p className="mt-1 font-body text-[18px] font-semibold text-[#32221d]">{donor.county}</p>
+          <p className="mt-2 font-body text-[12.5px] text-[#7d716a]">{donor.subCounty} sub county</p>
         </div>
         <div className="flat_card">
-          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">
+          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">
             <CalendarClock size={13} aria-hidden="true" />
             Next eligible donation
           </p>
-          <p className="mt-1 font-body text-[18px] font-semibold text-[#8f0b1f]">
+          <p className="mt-1 font-body text-[18px] font-semibold text-[#8a3a2c]">
             {nextEligible ? formatDate(nextEligible) : "Eligible now"}
           </p>
-          <p className="mt-2 font-body text-[12.5px] text-[#7f7174]">
+          <p className="mt-2 font-body text-[12.5px] text-[#7d716a]">
             Last donation {formatDate(donor.lastDonationDate)}
           </p>
         </div>
@@ -59,7 +59,7 @@ export function DonorDashboardView({
         <div className="flat_card">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <HeartPulse size={18} className="text-[#c8102e]" aria-hidden="true" />
+              <HeartPulse size={18} className="text-[#ad4a3a]" aria-hidden="true" />
               <h2 className="text-[22px]">Needed near you</h2>
             </div>
             <Link href="/urgent-requests" className="read_more text-[14px]">
@@ -72,13 +72,13 @@ export function DonorDashboardView({
               {opportunities.map((request) => (
                 <li
                   key={request.ref}
-                  className="flex flex-wrap items-center justify-between gap-3 rounded-[7px] border border-[#f2e6e7] px-4 py-3"
+                  className="flex flex-wrap items-center justify-between gap-3 rounded-[7px] border border-[#f1e5df] px-4 py-3"
                 >
                   <div className="flex items-center gap-3">
                     <BloodTypeBadge bloodType={request.bloodType} />
                     <div>
-                      <p className="font-body text-[14px] font-semibold text-[#2b1417]">{request.hospital}</p>
-                      <p className="font-body text-[12.5px] text-[#7f7174]">
+                      <p className="font-body text-[14px] font-semibold text-[#33231e]">{request.hospital}</p>
+                      <p className="font-body text-[12.5px] text-[#7d716a]">
                         {request.county} County, {request.units} unit
                         {request.units === 1 ? "" : "s"}, <TimeAgo iso={request.postedAt} prefix="" />
                       </p>
@@ -88,7 +88,7 @@ export function DonorDashboardView({
                     <UrgencyBadge urgency={request.urgency} />
                     <Link
                       href={`/urgent-requests?ref=${request.ref}`}
-                      className="font-body text-[13px] font-semibold text-[#9a0c22] underline underline-offset-4"
+                      className="font-body text-[13px] font-semibold text-[#8a382b] underline underline-offset-4"
                     >
                       Respond
                     </Link>
@@ -97,7 +97,7 @@ export function DonorDashboardView({
               ))}
             </ul>
           ) : (
-            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f59]">
               No live requests in {donor.county} County right now. We will alert you when a hospital near
               you needs {donor.bloodType} blood.
             </p>
@@ -109,7 +109,7 @@ export function DonorDashboardView({
 
       <div className="flat_card">
         <div className="flex items-center gap-2">
-          <Droplets size={18} className="text-[#c8102e]" aria-hidden="true" />
+          <Droplets size={18} className="text-[#ad4a3a]" aria-hidden="true" />
           <h2 className="text-[22px]">Past donation log</h2>
         </div>
         {donor.donations.length ? (
@@ -136,7 +136,7 @@ export function DonorDashboardView({
             </table>
           </div>
         ) : (
-          <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f62]">
+          <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f59]">
             Your log is empty for now. After a donation, the hospital confirms arrival and the record
             appears here.
           </p>

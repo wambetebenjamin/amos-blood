@@ -112,9 +112,9 @@ export function RespondModal({ request, open, onClose, onSuccess }: RespondModal
       title="Respond to this request"
       description={`${request.hospital}, ${request.county}`}
     >
-      <div className="mb-4 flex flex-wrap items-center gap-3 rounded-[7px] bg-[#fff4f5] p-4">
+      <div className="mb-4 flex flex-wrap items-center gap-3 rounded-[7px] bg-[#fdf4f0] p-4">
         <span className="blood_badge">{request.bloodType}</span>
-        <span className="font-body text-[13.5px] text-[#7e4a52]">
+        <span className="font-body text-[13.5px] text-[#7d5a50]">
           {request.units} unit{request.units === 1 ? "" : "s"} needed. Reference {request.ref}.
         </span>
       </div>

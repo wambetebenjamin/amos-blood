@@ -61,14 +61,14 @@ export function Modal({ open, onClose, title, description, children }: ModalProp
           <div>
             <h2 id={titleId}>{title}</h2>
             {description ? (
-              <p className="font-body text-[14px] text-[#6d5f62]">{description}</p>
+              <p className="font-body text-[14px] text-[#6d5f59]">{description}</p>
             ) : null}
           </div>
           <button
             type="button"
             onClick={onClose}
             aria-label="Close dialog"
-            className="rounded-full border border-[#f2e7e8] p-2 text-[#6d5f62] transition hover:border-[#c8102e] hover:text-[#9a0c22]"
+            className="rounded-full border border-[#f1e6e0] p-2 text-[#6d5f59] transition hover:border-[#ad4a3a] hover:text-[#8a382b]"
           >
             <X size={18} aria-hidden="true" />
           </button>
