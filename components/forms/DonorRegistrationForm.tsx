@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Check, Loader2, ShieldCheck } from "lucide-react";
 import { bloodTypes } from "@/lib/blood";
 import { counties } from "@/lib/site";
@@ -38,7 +37,6 @@ const declarations = [
 ];
 
 export function DonorRegistrationForm() {
-  const reduced = useReducedMotion();
   const [step, setStep] = useState(1);
   const [checks, setChecks] = useState<boolean[]>([false, false, false, false]);
   const [healthError, setHealthError] = useState<string | null>(null);
@@ -139,7 +137,7 @@ export function DonorRegistrationForm() {
           <div>
             <span className="eyebrow">Registration complete</span>
             <h2 className="mt-2 text-[30px]">Welcome to Amos Blood</h2>
-            <p className="mt-2 max-w-xl font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-2 max-w-xl font-body text-[14.5px] leading-relaxed text-[#6d5f59]">
               Your donor profile is active. Save your donor ID, and a hospital can scan the code on your
               card when you arrive to donate.
             </p>
@@ -152,17 +150,17 @@ export function DonorRegistrationForm() {
 
         <div className="mt-7 grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="grid gap-3">
-            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf7f8] px-4 py-3">
-              <span className="font-body text-[13px] text-[#7d6c6f]">Donor ID</span>
-              <span className="font-body text-[16px] font-bold text-[#2a1215]">{result.donorId}</span>
+            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf8f5] px-4 py-3">
+              <span className="font-body text-[13px] text-[#7c6f68]">Donor ID</span>
+              <span className="font-body text-[16px] font-bold text-[#32221d]">{result.donorId}</span>
             </div>
-            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf7f8] px-4 py-3">
-              <span className="font-body text-[13px] text-[#7d6c6f]">Blood type</span>
+            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf8f5] px-4 py-3">
+              <span className="font-body text-[13px] text-[#7c6f68]">Blood type</span>
               <span className="blood_badge">{result.bloodType}</span>
             </div>
-            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf7f8] px-4 py-3">
-              <span className="font-body text-[13px] text-[#7d6c6f]">Next eligible donation</span>
-              <span className="font-body text-[14px] font-semibold text-[#2a1215]">
+            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf8f5] px-4 py-3">
+              <span className="font-body text-[13px] text-[#7c6f68]">Next eligible donation</span>
+              <span className="font-body text-[14px] font-semibold text-[#32221d]">
                 {result.nextEligibleDate
                   ? new Date(result.nextEligibleDate).toLocaleDateString("en-KE", {
                       day: "numeric",
@@ -178,12 +176,7 @@ export function DonorRegistrationForm() {
             </p>
           </div>
 
-          <motion.div
-            initial={reduced ? false : { scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-            className="mx-auto w-full max-w-[280px] rounded-[9px] border border-[#fbe4e7] bg-white p-4 text-center shadow-[0_3px_6px_rgba(0,0,0,0.08)]"
-          >
+          <div className="mx-auto w-full max-w-[280px] rounded-[9px] border border-[#f7e3dc] bg-white p-4 text-center shadow-[0_3px_6px_rgba(0,0,0,0.08)]">
             {result.qrCode ? (
               <Image
                 src={result.qrCode}
@@ -194,9 +187,9 @@ export function DonorRegistrationForm() {
                 className="mx-auto h-auto w-full"
               />
             ) : null}
-            <p className="mt-3 font-display text-[18px] text-[#2a1215]">Amos Blood donor</p>
-            <p className="font-body text-[12.5px] text-[#7d6c6f]">{result.donorId}</p>
-          </motion.div>
+            <p className="mt-3 font-display text-[18px] text-[#32221d]">Amos Blood donor</p>
+            <p className="font-body text-[12.5px] text-[#7c6f68]">{result.donorId}</p>
+          </div>
         </div>
 
         <div className="mt-7 flex flex-wrap gap-3">
@@ -223,10 +216,10 @@ export function DonorRegistrationForm() {
               <span
                 className={`flex h-9 w-9 items-center justify-center rounded-full font-body text-[13px] font-bold ${
                   step > number
-                    ? "bg-[#c8102e] text-white"
+                    ? "bg-[#ad4a3a] text-white"
                     : step === number
-                      ? "bg-[#fbe4e7] text-[#8f0b1f]"
-                      : "bg-[#f7edee] text-[#8d7f82]"
+                      ? "bg-[#f7e3dc] text-[#8a3a2c]"
+                      : "bg-[#f7ece6] text-[#8a7f77]"
                 }`}
               >
                 {step > number ? <Check size={15} aria-hidden="true" /> : number}
@@ -235,21 +228,13 @@ export function DonorRegistrationForm() {
             </div>
           ))}
         </div>
-        <span className="font-body text-[12.5px] font-semibold uppercase tracking-[0.12em] text-[#7f7174]">
+        <span className="font-body text-[12.5px] font-semibold uppercase tracking-[0.12em] text-[#7d716a]">
           Step {step} of 3
         </span>
       </div>
 
       <form onSubmit={onSubmit} noValidate>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={step}
-            initial={reduced ? false : { opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={reduced ? undefined : { opacity: 0, x: -24 }}
-            transition={{ duration: 0.28, ease: "easeOut" }}
-            className="grid gap-4"
-          >
+        <div className="grid gap-4">
             {step === 1 ? (
               <>
                 <h2 className="text-[24px]">Tell us who you are</h2>
@@ -275,7 +260,7 @@ export function DonorRegistrationForm() {
                       {...register("dateOfBirth", { required: "Select your date of birth" })}
                     />
                     {errors.dateOfBirth ? <p className="field_error">{errors.dateOfBirth.message}</p> : null}
-                    <p className="font-body text-[11.5px] text-[#7f7174]">
+                    <p className="font-body text-[11.5px] text-[#7d716a]">
                       You must be between 16 and 65 years old.
                     </p>
                   </div>
@@ -304,7 +289,7 @@ export function DonorRegistrationForm() {
                         </option>
                       ))}
                     </select>
-                    <p className="font-body text-[11.5px] text-[#7f7174]">
+                    <p className="font-body text-[11.5px] text-[#7d716a]">
                       Not sure? A hospital can confirm with a quick test when you donate.
                     </p>
                   </div>
@@ -364,7 +349,7 @@ export function DonorRegistrationForm() {
                     {errors.lastDonationDate ? (
                       <p className="field_error">{errors.lastDonationDate.message}</p>
                     ) : null}
-                    <p className="font-body text-[11.5px] text-[#7f7174]">
+                    <p className="font-body text-[11.5px] text-[#7d716a]">
                       We use this to calculate your next eligible donation date.
                     </p>
                   </div>
@@ -375,11 +360,11 @@ export function DonorRegistrationForm() {
             {step === 3 ? (
               <>
                 <h2 className="text-[24px]">Health declaration</h2>
-                <p className="font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
+                <p className="font-body text-[13.5px] leading-relaxed text-[#6d5f59]">
                   Please read each statement and confirm. If any statement is not true today, wait until
                   it is, or call us on WhatsApp and a coordinator will advise you.
                 </p>
-                <div className="rounded-[7px] bg-[#fdf7f8] px-4">
+                <div className="rounded-[7px] bg-[#fdf8f5] px-4">
                   {declarations.map((declaration, index) => (
                     <label className="check_row" key={declaration}>
                       <input
@@ -399,9 +384,9 @@ export function DonorRegistrationForm() {
                 </div>
                 {healthError ? <p className="field_error">{healthError}</p> : null}
 
-                <div className="rounded-[7px] border border-[#f2e6e7] p-4">
-                  <p className="font-body text-[13px] font-semibold text-[#2a1215]">Summary</p>
-                  <ul className="mt-2 grid gap-1.5 font-body text-[13px] text-[#6d5f62] sm:grid-cols-2">
+                <div className="rounded-[7px] border border-[#f1e5df] p-4">
+                  <p className="font-body text-[13px] font-semibold text-[#32221d]">Summary</p>
+                  <ul className="mt-2 grid gap-1.5 font-body text-[13px] text-[#6d5f59] sm:grid-cols-2">
                     <li>Name: {watched.fullName || "Not set"}</li>
                     <li>Blood type: {watched.bloodType}</li>
                     <li>County: {watched.county}</li>
@@ -419,8 +404,7 @@ export function DonorRegistrationForm() {
                 ) : null}
               </>
             ) : null}
-          </motion.div>
-        </AnimatePresence>
+        </div>
 
         {error ? <div className="format_error mt-4">{error}</div> : null}
 

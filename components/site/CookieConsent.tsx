@@ -80,16 +80,16 @@ export function CookieConsent() {
     <>
       {showBanner ? (
         <div
-          className="cookie_banner fixed inset-x-0 bottom-0 z-[9999] border-t border-[#f0dfe1] bg-white shadow-[0_-10px_30px_rgba(71,7,15,0.12)]"
+          className="cookie_banner fixed inset-x-0 bottom-0 z-[9999] border-t border-[#eee0da] bg-white shadow-[0_-10px_30px_rgba(70,36,29,0.12)]"
           role="region"
           aria-label="Cookie consent"
         >
           <div className="container-t flex flex-col gap-4 py-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
-              <p className="font-body text-[15px] font-semibold text-[#2a1215]">
+              <p className="font-body text-[15px] font-semibold text-[#32221d]">
                 We use cookies to keep Amos Blood working and to improve the service.
               </p>
-              <p className="mt-1.5 font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
+              <p className="mt-1.5 font-body text-[13.5px] leading-relaxed text-[#6d5f59]">
                 Necessary cookies keep sign in and forms working. Optional cookies help us understand
                 how the site is used. You can change your choice at any time. We handle your data under
                 the Kenya Data Protection Act, 2019. Read our{" "}
@@ -137,8 +137,8 @@ export function CookieConsent() {
         <div className="grid gap-3">
           <div className="flat_card flex items-start justify-between gap-4">
             <div>
-              <p className="font-body text-[14px] font-semibold text-[#2a1215]">Necessary</p>
-              <p className="mt-1 font-body text-[13px] leading-relaxed text-[#6d5f62]">
+              <p className="font-body text-[14px] font-semibold text-[#32221d]">Necessary</p>
+              <p className="mt-1 font-body text-[13px] leading-relaxed text-[#6d5f59]">
                 Required for sign in, form security and your cookie choice. Always on.
               </p>
             </div>
@@ -169,16 +169,16 @@ export function CookieConsent() {
               className="flat_card flex cursor-pointer items-start justify-between gap-4"
             >
               <span>
-                <span className="block font-body text-[14px] font-semibold text-[#2a1215]">
+                <span className="block font-body text-[14px] font-semibold text-[#32221d]">
                   {item.label}
                 </span>
-                <span className="mt-1 block font-body text-[13px] leading-relaxed text-[#6d5f62]">
+                <span className="mt-1 block font-body text-[13px] leading-relaxed text-[#6d5f59]">
                   {item.copy}
                 </span>
               </span>
               <input
                 type="checkbox"
-                className="mt-1 h-5 w-5 flex-none accent-[#c8102e]"
+                className="mt-1 h-5 w-5 flex-none accent-[#ad4a3a]"
                 checked={preferences[item.key]}
                 onChange={(event) =>
                   setPreferences((current) => ({ ...current, [item.key]: event.target.checked }))
@@ -204,7 +204,7 @@ export function CookieConsent() {
             Cancel
           </button>
         </div>
-        <p className="mt-4 font-body text-[12px] leading-relaxed text-[#7f7174]">
+        <p className="mt-4 font-body text-[12px] leading-relaxed text-[#7d716a]">
           Your choice is stored in this browser only under the key {STORAGE_KEY}. You can clear it from
           your browser settings whenever you wish.
         </p>

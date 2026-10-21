@@ -45,7 +45,7 @@ export function HospitalDashboardView({
         <div>
           <span className="eyebrow">Hospital dashboard</span>
           <h2 className="mt-2 text-[28px]">{hospital.name}</h2>
-          <p className="mt-1 font-body text-[13.5px] text-[#7f7174]">
+          <p className="mt-1 font-body text-[13.5px] text-[#7d716a]">
             {hospital.county} County. Requests stay public for {stats.liveWindowHours} hours.
           </p>
         </div>
@@ -57,32 +57,32 @@ export function HospitalDashboardView({
 
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="flat_card">
-          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">
+          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">
             <ClipboardList size={13} aria-hidden="true" />
             Active requests
           </p>
-          <p className="mt-1 font-body text-[30px] font-bold text-[#2a1215]">{stats.activeCount}</p>
+          <p className="mt-1 font-body text-[30px] font-bold text-[#32221d]">{stats.activeCount}</p>
         </div>
         <div className="flat_card">
-          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">
+          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">
             <Users2 size={13} aria-hidden="true" />
             Donor responses
           </p>
-          <p className="mt-1 font-body text-[30px] font-bold text-[#2a1215]">{stats.responseCount}</p>
+          <p className="mt-1 font-body text-[30px] font-bold text-[#32221d]">{stats.responseCount}</p>
         </div>
         <div className="flat_card">
-          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7f7174]">
+          <p className="flex items-center gap-2 font-body text-[12px] uppercase tracking-[0.12em] text-[#7d716a]">
             <CalendarCheck size={13} aria-hidden="true" />
             Fulfilled requests
           </p>
-          <p className="mt-1 font-body text-[30px] font-bold text-[#2a1215]">{stats.fulfilledCount}</p>
+          <p className="mt-1 font-body text-[30px] font-bold text-[#32221d]">{stats.fulfilledCount}</p>
         </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="flat_card">
           <div className="flex items-center gap-2">
-            <Droplets size={18} className="text-[#c8102e]" aria-hidden="true" />
+            <Droplets size={18} className="text-[#ad4a3a]" aria-hidden="true" />
             <h2 className="text-[22px]">Active requests</h2>
           </div>
           {active.length ? (
@@ -101,7 +101,7 @@ export function HospitalDashboardView({
                 <tbody>
                   {active.map((request) => (
                     <tr key={request.ref}>
-                      <td className="font-semibold text-[#2a1215]">{request.ref}</td>
+                      <td className="font-semibold text-[#32221d]">{request.ref}</td>
                       <td>
                         <BloodTypeBadge bloodType={request.bloodType} />
                       </td>
@@ -119,7 +119,7 @@ export function HospitalDashboardView({
               </table>
             </div>
           ) : (
-            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f59]">
               No live requests. Post a new request to reach verified donors in your county.
             </p>
           )}
@@ -127,23 +127,23 @@ export function HospitalDashboardView({
 
         <div className="flat_card">
           <h2 className="text-[20px]">Requests by blood type</h2>
-          <p className="mt-1 font-body text-[12.5px] text-[#7f7174]">All requests posted by this facility.</p>
+          <p className="mt-1 font-body text-[12.5px] text-[#7d716a]">All requests posted by this facility.</p>
           <div className="mt-4 h-[220px] w-full">
             {chartData.length ? (
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chartData} margin={{ top: 4, right: 8, left: -18, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f2e6e7" />
-                  <XAxis dataKey="type" tick={{ fontSize: 11, fill: "#7d6c6f" }} axisLine={false} tickLine={false} />
-                  <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: "#7d6c6f" }} axisLine={false} tickLine={false} />
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1e5df" />
+                  <XAxis dataKey="type" tick={{ fontSize: 11, fill: "#7c6f68" }} axisLine={false} tickLine={false} />
+                  <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: "#7c6f68" }} axisLine={false} tickLine={false} />
                   <Tooltip
-                    contentStyle={{ borderRadius: 6, border: "1px solid #f2e6e7", fontSize: 12 }}
-                    labelStyle={{ color: "#2a1215", fontWeight: 600 }}
+                    contentStyle={{ borderRadius: 6, border: "1px solid #f1e5df", fontSize: 12 }}
+                    labelStyle={{ color: "#32221d", fontWeight: 600 }}
                   />
-                  <Bar dataKey="count" fill="#c8102e" radius={[4, 4, 0, 0]} maxBarSize={34} />
+                  <Bar dataKey="count" fill="#ad4a3a" radius={[4, 4, 0, 0]} maxBarSize={34} />
                 </BarChart>
               </ResponsiveContainer>
             ) : (
-              <p className="font-body text-[13px] text-[#7f7174]">No data yet.</p>
+              <p className="font-body text-[13px] text-[#7d716a]">No data yet.</p>
             )}
           </div>
         </div>
@@ -155,19 +155,19 @@ export function HospitalDashboardView({
           {arrivals.length ? (
             <ul className="mt-4 grid gap-3">
               {arrivals.map((arrival) => (
-                <li key={arrival.id} className="rounded-[7px] border border-[#f2e6e7] px-4 py-3">
+                <li key={arrival.id} className="rounded-[7px] border border-[#f1e5df] px-4 py-3">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="font-body text-[14px] font-semibold text-[#2b1417]">{arrival.donorName}</span>
+                    <span className="font-body text-[14px] font-semibold text-[#33231e]">{arrival.donorName}</span>
                     <BloodTypeBadge bloodType={arrival.bloodType} />
                   </div>
-                  <p className="mt-1 font-body text-[12.5px] text-[#7f7174]">
+                  <p className="mt-1 font-body text-[12.5px] text-[#7d716a]">
                     {arrival.hospital} · Request {arrival.requestRef} · Arrival {arrival.estimatedArrival}
                   </p>
                 </li>
               ))}
             </ul>
           ) : (
-            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f59]">
               Donors who confirm arrival appear here. Confirm each donor at the blood bank, then close the
               request when the units are secured.
             </p>
@@ -207,7 +207,7 @@ export function HospitalDashboardView({
               </table>
             </div>
           ) : (
-            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f59]">
               No fulfilled requests recorded yet. History appears here after a request closes.
             </p>
           )}

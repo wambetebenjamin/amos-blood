@@ -18,7 +18,7 @@ export function PageBanner({
     <section
       className="bradcam_area overlay"
       style={{
-        backgroundImage: `linear-gradient(120deg, rgba(43, 7, 12, 0.55), rgba(43, 7, 12, 0.28)), url(${image})`,
+        backgroundImage: `linear-gradient(120deg, rgba(50, 26, 21, 0.55), rgba(50, 26, 21, 0.28)), url(${image})`,
       }}
     >
       <div className="container-t">

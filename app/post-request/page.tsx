@@ -70,20 +70,20 @@ export default async function PostRequestPage() {
               return (
                 <div className="flat_card" key={item.title}>
                   <div className="flex items-center gap-2">
-                    <Icon size={18} className="text-[#c8102e]" aria-hidden="true" />
+                    <Icon size={18} className="text-[#ad4a3a]" aria-hidden="true" />
                     <h2 className="text-[19px]">{item.title}</h2>
                   </div>
-                  <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5f5254]">{item.copy}</p>
+                  <p className="mt-2 font-body text-[13px] leading-relaxed text-[#63544e]">{item.copy}</p>
                 </div>
               );
             })}
 
             <div className="soft_card">
               <div className="flex items-center gap-2">
-                <AlertTriangle size={17} className="text-[#d92d20]" aria-hidden="true" />
+                <AlertTriangle size={17} className="text-[#c0442f]" aria-hidden="true" />
                 <h2 className="text-[18px]">Life threatening emergency</h2>
               </div>
-              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5f5254]">
+              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#63544e]">
                 If a patient cannot wait for donor responses, call the nearest blood bank and your county
                 referral hospital first. Post the request here in parallel, not instead.
               </p>
@@ -91,7 +91,7 @@ export default async function PostRequestPage() {
 
             <div className="flat_card">
               <h2 className="text-[18px]">Need a facility account?</h2>
-              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#6d5f62]">
+              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#6d5f59]">
                 Create a hospital sign in to have your name, county and contact person filled in
                 automatically on every request.
               </p>

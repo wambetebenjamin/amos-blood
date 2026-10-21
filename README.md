@@ -4,7 +4,7 @@
 
 Amos Blood is a blood donation and medical supply matching platform for Kenya. Donors register their blood type once, hospitals post live requests, and the board stays current for 72 hours at a time.
 
-Built on the uploaded `charifit-master.zip` layout: same fonts, buttons and section rhythm, restyled with a blood donation palette (crimson `#C8102E`, maroon ink, rose surfaces) in a Next.js App Router application.
+Built on the uploaded `charifit-master.zip` layout: same fonts, buttons and section rhythm, restyled with a warm blood donation palette (brick `#AD4A3A`, warm brown ink, linen surfaces) in a Next.js App Router application.
 
 ## Stack
 

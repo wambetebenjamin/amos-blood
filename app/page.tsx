@@ -107,9 +107,9 @@ export default async function HomePage() {
 
           <LiveRequestsPanel requests={requests} />
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 rounded-[7px] border border-[#fbe4e7] bg-[#fff4f5] px-5 py-4">
-            <ShieldCheck size={20} className="text-[#9a0c22]" aria-hidden="true" />
-            <p className="font-body text-[13.5px] text-[#7e4a52]">
+          <div className="mt-8 flex flex-wrap items-center gap-4 rounded-[7px] border border-[#f7e3dc] bg-[#fdf4f0] px-5 py-4">
+            <ShieldCheck size={20} className="text-[#8a382b]" aria-hidden="true" />
+            <p className="font-body text-[13.5px] text-[#7d5a50]">
               Every hospital on this board is verified before a request goes live. Patient names and
               personal details are never published.
             </p>
@@ -117,7 +117,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section_padding bg-[#fdf7f8]" aria-labelledby="compatibility-heading">
+      <section className="section_padding bg-[#fdf8f5]" aria-labelledby="compatibility-heading">
         <div className="container-t">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <Reveal>
@@ -133,16 +133,16 @@ export default async function HomePage() {
               />
               <ul className="mt-6 grid gap-3">
                 <li className="flex items-start gap-3">
-                  <Droplets size={18} className="mt-1 flex-none text-[#c8102e]" aria-hidden="true" />
-                  <span className="font-body text-[14.5px] leading-relaxed text-[#5f5254]">
-                    <strong className="font-semibold text-[#2b1417]">Need it fast?</strong> O negative is
+                  <Droplets size={18} className="mt-1 flex-none text-[#ad4a3a]" aria-hidden="true" />
+                  <span className="font-body text-[14.5px] leading-relaxed text-[#63544e]">
+                    <strong className="font-semibold text-[#33231e]">Need it fast?</strong> O negative is
                     the universal donor type used before a patient is typed.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ShieldCheck size={18} className="mt-1 flex-none text-[#c8102e]" aria-hidden="true" />
-                  <span className="font-body text-[14.5px] leading-relaxed text-[#5f5254]">
-                    <strong className="font-semibold text-[#2b1417]">Rare types matter.</strong> AB
+                  <ShieldCheck size={18} className="mt-1 flex-none text-[#ad4a3a]" aria-hidden="true" />
+                  <span className="font-body text-[14.5px] leading-relaxed text-[#63544e]">
+                    <strong className="font-semibold text-[#33231e]">Rare types matter.</strong> AB
                     negative is the rarest type in Kenya, and a small pool of donors serves many
                     patients.
                   </span>
@@ -199,15 +199,15 @@ export default async function HomePage() {
                       const Icon = step.icon;
                       return (
                         <li key={step.title} className="flex gap-3">
-                          <span className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#fff4f5] font-body text-[13px] font-bold text-[#9a0c22]">
+                          <span className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#fdf4f0] font-body text-[13px] font-bold text-[#8a382b]">
                             {index + 1}
                           </span>
                           <span>
-                            <span className="flex items-center gap-2 font-body text-[15px] font-semibold text-[#2b1417]">
-                              <Icon size={16} className="text-[#c8102e]" aria-hidden="true" />
+                            <span className="flex items-center gap-2 font-body text-[15px] font-semibold text-[#33231e]">
+                              <Icon size={16} className="text-[#ad4a3a]" aria-hidden="true" />
                               {step.title}
                             </span>
-                            <span className="mt-1 block font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
+                            <span className="mt-1 block font-body text-[13.5px] leading-relaxed text-[#6d5f59]">
                               {step.copy}
                             </span>
                           </span>
@@ -241,15 +241,15 @@ export default async function HomePage() {
                       const Icon = step.icon;
                       return (
                         <li key={step.title} className="flex gap-3">
-                          <span className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#fff4f5] font-body text-[13px] font-bold text-[#9a0c22]">
+                          <span className="mt-0.5 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#fdf4f0] font-body text-[13px] font-bold text-[#8a382b]">
                             {index + 1}
                           </span>
                           <span>
-                            <span className="flex items-center gap-2 font-body text-[15px] font-semibold text-[#2b1417]">
-                              <Icon size={16} className="text-[#c8102e]" aria-hidden="true" />
+                            <span className="flex items-center gap-2 font-body text-[15px] font-semibold text-[#33231e]">
+                              <Icon size={16} className="text-[#ad4a3a]" aria-hidden="true" />
                               {step.title}
                             </span>
-                            <span className="mt-1 block font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
+                            <span className="mt-1 block font-body text-[13.5px] leading-relaxed text-[#6d5f59]">
                               {step.copy}
                             </span>
                           </span>
@@ -285,7 +285,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section_padding bg-[#fdf7f8]" aria-labelledby="eligibility-heading">
+      <section className="section_padding bg-[#fdf8f5]" aria-labelledby="eligibility-heading">
         <div className="container-t">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <Reveal>
@@ -318,19 +318,19 @@ export default async function HomePage() {
               {eligibilityQuickFacts.map((fact, index) => (
                 <Reveal key={fact.title} delay={index * 0.06}>
                   <div className="flat_card h-full">
-                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#fff4f5]">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#fdf4f0]">
                       {fact.title === "Age range" ? (
-                        <CalendarCheck size={18} className="text-[#9a0c22]" aria-hidden="true" />
+                        <CalendarCheck size={18} className="text-[#8a382b]" aria-hidden="true" />
                       ) : fact.title === "Weight requirement" ? (
-                        <HeartPulse size={18} className="text-[#9a0c22]" aria-hidden="true" />
+                        <HeartPulse size={18} className="text-[#8a382b]" aria-hidden="true" />
                       ) : fact.title === "Rest period" ? (
-                        <Droplets size={18} className="text-[#9a0c22]" aria-hidden="true" />
+                        <Droplets size={18} className="text-[#8a382b]" aria-hidden="true" />
                       ) : (
-                        <Stethoscope size={18} className="text-[#9a0c22]" aria-hidden="true" />
+                        <Stethoscope size={18} className="text-[#8a382b]" aria-hidden="true" />
                       )}
                     </div>
                     <h3 className="text-[20px]">{fact.title}</h3>
-                    <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[#6d5f62]">{fact.body}</p>
+                    <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[#6d5f59]">{fact.body}</p>
                   </div>
                 </Reveal>
               ))}
@@ -343,7 +343,7 @@ export default async function HomePage() {
         <div className="container-t">
           <p
             id="partners-heading"
-            className="font-body text-[12px] font-bold uppercase tracking-[0.18em] text-[#7f7174]"
+            className="font-body text-[12px] font-bold uppercase tracking-[0.18em] text-[#7d716a]"
           >
             Partner hospitals and blood banks
           </p>
@@ -377,11 +377,11 @@ export default async function HomePage() {
             {testimonials.map((testimonial, index) => (
               <Reveal key={testimonial.name} delay={index * 0.08}>
                 <figure className="flat_card flex h-full flex-col gap-4">
-                  <Droplets size={24} className="text-[#c8102e]" aria-hidden="true" />
-                  <blockquote className="font-body text-[14.5px] leading-relaxed text-[#4c4244]">
+                  <Droplets size={24} className="text-[#ad4a3a]" aria-hidden="true" />
+                  <blockquote className="font-body text-[14.5px] leading-relaxed text-[#4d4340]">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-auto flex items-center gap-3 border-t border-[#f4eaeb] pt-4">
+                  <figcaption className="mt-auto flex items-center gap-3 border-t border-[#f2e7e1] pt-4">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -390,10 +390,10 @@ export default async function HomePage() {
                       className="h-12 w-12 rounded-full object-cover"
                     />
                     <span>
-                      <span className="block font-body text-[14px] font-semibold text-[#2b1417]">
+                      <span className="block font-body text-[14px] font-semibold text-[#33231e]">
                         {testimonial.name}
                       </span>
-                      <span className="block font-body text-[12.5px] text-[#7f7174]">
+                      <span className="block font-body text-[12.5px] text-[#7d716a]">
                         {testimonial.role}
                       </span>
                     </span>
@@ -407,14 +407,14 @@ export default async function HomePage() {
 
       <section className="pb-[100px]">
         <div className="container-t">
-          <div className="relative overflow-hidden rounded-[7px] bg-[#c8102e] px-7 py-12 text-white sm:px-12">
+          <div className="relative overflow-hidden rounded-[7px] bg-[#ad4a3a] px-7 py-12 text-white sm:px-12">
             <div className="relative z-10 grid gap-7 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
-                <span className="eyebrow !text-[#ffe9ec]">One hour of your day</span>
+                <span className="eyebrow !text-[#fbe9e3]">One hour of your day</span>
                 <h2 className="mt-3 text-[34px] leading-tight text-white sm:text-[40px]">
                   Be someone&apos;s second chance this week
                 </h2>
-                <p className="mt-3 max-w-2xl font-body text-[15px] leading-relaxed text-[#fff5f5]">
+                <p className="mt-3 max-w-2xl font-body text-[15px] leading-relaxed text-[#fdf6f2]">
                   A single donation can support up to three patients. Register your type today, or talk
                   to a coordinator on WhatsApp if you have a question about eligibility.
                 </p>

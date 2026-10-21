@@ -22,7 +22,7 @@ export function RequestCard({ request, index = 0, onResponded }: RequestCardProp
       <Reveal className="h-full" delay={Math.min(index * 0.06, 0.3)} y={22}>
         <article
           className={`flat_card flex h-full flex-col gap-4 ${
-            request.urgency === "critical" ? "request_card_pulse border-[#f3cdd4]" : ""
+            request.urgency === "critical" ? "request_card_pulse border-[#f0cfc6]" : ""
           }`}
         >
           <div className="flex items-start justify-between gap-3">
@@ -32,7 +32,7 @@ export function RequestCard({ request, index = 0, onResponded }: RequestCardProp
 
           <div>
             <h3 className="text-[20px] leading-snug">{request.hospital}</h3>
-            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-body text-[13px] text-[#7d6c6f]">
+            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-body text-[13px] text-[#7c6f68]">
               <span className="inline-flex items-center gap-1.5">
                 <MapPin size={13} aria-hidden="true" />
                 {request.county} County
@@ -44,12 +44,12 @@ export function RequestCard({ request, index = 0, onResponded }: RequestCardProp
             </div>
           </div>
 
-          <p className="font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
+          <p className="font-body text-[13.5px] leading-relaxed text-[#6d5f59]">
             {request.patientCondition}.
           </p>
 
-          <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-[#f4eaeb] pt-4">
-            <span className="font-body text-[12.5px] text-[#7f7174]">
+          <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-[#f2e7e1] pt-4">
+            <span className="font-body text-[12.5px] text-[#7d716a]">
               <TimeAgo iso={request.postedAt} />
             </span>
             <button

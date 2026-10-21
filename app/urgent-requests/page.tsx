@@ -30,20 +30,20 @@ export default async function UrgentRequestsPage() {
         <div className="container-t">
           <div className="mb-8 grid gap-4 sm:grid-cols-3">
             <div className="flat_card flex items-start gap-3">
-              <Clock size={18} className="mt-0.5 flex-none text-[#c8102e]" aria-hidden="true" />
-              <p className="font-body text-[13px] leading-relaxed text-[#5f5254]">
+              <Clock size={18} className="mt-0.5 flex-none text-[#ad4a3a]" aria-hidden="true" />
+              <p className="font-body text-[13px] leading-relaxed text-[#63544e]">
                 Requests close automatically after 72 hours so the board stays current.
               </p>
             </div>
             <div className="flat_card flex items-start gap-3">
-              <ShieldCheck size={18} className="mt-0.5 flex-none text-[#c8102e]" aria-hidden="true" />
-              <p className="font-body text-[13px] leading-relaxed text-[#5f5254]">
+              <ShieldCheck size={18} className="mt-0.5 flex-none text-[#ad4a3a]" aria-hidden="true" />
+              <p className="font-body text-[13px] leading-relaxed text-[#63544e]">
                 Only verified hospitals and blood banks can post a request.
               </p>
             </div>
             <div className="flat_card flex items-start gap-3">
-              <MessageCircle size={18} className="mt-0.5 flex-none text-[#c8102e]" aria-hidden="true" />
-              <p className="font-body text-[13px] leading-relaxed text-[#5f5254]">
+              <MessageCircle size={18} className="mt-0.5 flex-none text-[#ad4a3a]" aria-hidden="true" />
+              <p className="font-body text-[13px] leading-relaxed text-[#63544e]">
                 Not sure if you qualify today?{" "}
                 <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text_link">
                   Ask a coordinator
@@ -55,8 +55,8 @@ export default async function UrgentRequestsPage() {
 
           <RequestBoard requests={requests} />
 
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-[7px] bg-[#fff4f5] px-6 py-5">
-            <p className="max-w-2xl font-body text-[13.5px] leading-relaxed text-[#7e4a52]">
+          <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-[7px] bg-[#fdf4f0] px-6 py-5">
+            <p className="max-w-2xl font-body text-[13.5px] leading-relaxed text-[#7d5a50]">
               If a patient needs blood today and no request is listed, call the hospital blood bank
               directly or message us on WhatsApp. Do not wait for a board update in an emergency.
             </p>

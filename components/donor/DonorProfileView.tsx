@@ -92,7 +92,7 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
             <div>
               <span className="eyebrow">Donor profile</span>
               <h2 className="mt-2 text-[30px]">{donor.fullName}</h2>
-              <p className="mt-1 font-body text-[13.5px] text-[#7f7174]">
+              <p className="mt-1 font-body text-[13.5px] text-[#7d716a]">
                 Donor since {formatDate(donor.createdAt)}. Keep your details current so hospitals can
                 reach you.
               </p>
@@ -101,28 +101,28 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-[7px] bg-[#fdf7f8] px-4 py-3">
-              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7f7174]">Donor ID</p>
-              <p className="mt-1 font-body text-[15px] font-bold text-[#2a1215]">{donor.id}</p>
+            <div className="rounded-[7px] bg-[#fdf8f5] px-4 py-3">
+              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7d716a]">Donor ID</p>
+              <p className="mt-1 font-body text-[15px] font-bold text-[#32221d]">{donor.id}</p>
             </div>
-            <div className="rounded-[7px] bg-[#fdf7f8] px-4 py-3">
-              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7f7174]">County</p>
-              <p className="mt-1 flex items-center gap-2 font-body text-[15px] font-semibold text-[#2a1215]">
-                <MapPin size={14} className="text-[#c8102e]" aria-hidden="true" />
+            <div className="rounded-[7px] bg-[#fdf8f5] px-4 py-3">
+              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7d716a]">County</p>
+              <p className="mt-1 flex items-center gap-2 font-body text-[15px] font-semibold text-[#32221d]">
+                <MapPin size={14} className="text-[#ad4a3a]" aria-hidden="true" />
                 {donor.county}
               </p>
             </div>
-            <div className="rounded-[7px] bg-[#fdf7f8] px-4 py-3">
-              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7f7174]">Last donation</p>
-              <p className="mt-1 font-body text-[15px] font-semibold text-[#2a1215]">
+            <div className="rounded-[7px] bg-[#fdf8f5] px-4 py-3">
+              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7d716a]">Last donation</p>
+              <p className="mt-1 font-body text-[15px] font-semibold text-[#32221d]">
                 {formatDate(donor.lastDonationDate)}
               </p>
             </div>
-            <div className="rounded-[7px] bg-[#fff4f5] px-4 py-3">
-              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7e4a52]">
+            <div className="rounded-[7px] bg-[#fdf4f0] px-4 py-3">
+              <p className="font-body text-[11.5px] uppercase tracking-[0.12em] text-[#7d5a50]">
                 Next eligible donation
               </p>
-              <p className="mt-1 flex items-center gap-2 font-body text-[15px] font-semibold text-[#8f0b1f]">
+              <p className="mt-1 flex items-center gap-2 font-body text-[15px] font-semibold text-[#8a3a2c]">
                 <CalendarClock size={14} aria-hidden="true" />
                 {eligible ? formatDate(eligible) : "You can donate now"}
               </p>
@@ -132,7 +132,7 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
 
         <div className="flat_card">
           <div className="flex items-center gap-2">
-            <Droplets size={18} className="text-[#c8102e]" aria-hidden="true" />
+            <Droplets size={18} className="text-[#ad4a3a]" aria-hidden="true" />
             <h2 className="text-[22px]">Donation history</h2>
           </div>
           {donor.donations.length ? (
@@ -157,7 +157,7 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
               </table>
             </div>
           ) : (
-            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f62]">
+            <p className="mt-3 font-body text-[14px] leading-relaxed text-[#6d5f59]">
               No donations recorded yet. When you donate at a partner hospital, the blood bank updates this
               log so your 90 day interval stays accurate.
             </p>
@@ -170,10 +170,10 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
       <div className="grid gap-6">
         <Reveal className="flat_card text-center">
           <div className="flex items-center justify-center gap-2">
-            <QrCode size={17} className="text-[#c8102e]" aria-hidden="true" />
+            <QrCode size={17} className="text-[#ad4a3a]" aria-hidden="true" />
             <h2 className="text-[21px]">Your scan code</h2>
           </div>
-          <div className="mx-auto mt-4 w-full max-w-[250px] rounded-[9px] border border-[#fbe4e7] bg-white p-3">
+          <div className="mx-auto mt-4 w-full max-w-[250px] rounded-[9px] border border-[#f7e3dc] bg-white p-3">
             {qrCode ? (
               <Image
                 src={qrCode}
@@ -185,7 +185,7 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
               />
             ) : null}
           </div>
-          <p className="mt-3 font-body text-[13px] leading-relaxed text-[#6d5f62]">
+          <p className="mt-3 font-body text-[13px] leading-relaxed text-[#6d5f59]">
             Present this code at the blood bank. It confirms your donor ID, blood type and county without
             sharing your medical history.
           </p>
@@ -194,7 +194,7 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
             {pdfBusy ? "Preparing card" : "Download donor card as PDF"}
           </button>
           {pdfMessage ? (
-            <p className="mt-3 font-body text-[12.5px] text-[#8b2531]" role="status">
+            <p className="mt-3 font-body text-[12.5px] text-[#8a4a3c]" role="status">
               {pdfMessage}
             </p>
           ) : null}
@@ -202,7 +202,7 @@ export function DonorProfileView({ donor, qrCode }: { donor: Donor; qrCode: stri
 
         <div className="soft_card">
           <h2 className="text-[20px]">Your privacy</h2>
-          <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[#5f5254]">
+          <p className="mt-2 font-body text-[13.5px] leading-relaxed text-[#63544e]">
             Hospitals see your donor ID, blood type and county. They do not see your date of birth,
             address or donation history. You can ask us to delete your profile at any time under the
             Kenya Data Protection Act, 2019.

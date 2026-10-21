@@ -109,10 +109,10 @@ export function RecaptchaV2Fallback({
 
   return (
     <div className="form_note">
-      <p className="font-body text-[13px] font-semibold text-[#8b2531]">
+      <p className="font-body text-[13px] font-semibold text-[#8a4a3c]">
         One quick check before we continue
       </p>
-      <p className="mt-1 font-body text-[12.5px] leading-relaxed text-[#7e4a52]">
+      <p className="mt-1 font-body text-[12.5px] leading-relaxed text-[#7d5a50]">
         Our automated check was not fully confident, so please confirm you are a real person.
       </p>
       <div ref={holder} className="mt-3 min-h-[78px]" />
@@ -129,7 +129,7 @@ export function RecaptchaV2Fallback({
 
 export function RecaptchaNotice() {
   return (
-    <p className="font-body text-[11.5px] leading-relaxed text-[#7f7174]">
+    <p className="font-body text-[11.5px] leading-relaxed text-[#7d716a]">
       This form is protected by reCAPTCHA. The Google{" "}
       <a
         className="text_link text-[11.5px]"
