@@ -29,11 +29,11 @@ export default async function SignUpPage({
       <section className="section_padding">
         <div className="container-t grid gap-8 lg:grid-cols-[1fr_1fr]">
           <div className="mx-auto w-full max-w-md">
-            <Suspense fallback={<div className="flat_card h-[460px] animate-pulse bg-[#f7f7f7]" />}>
+            <Suspense fallback={<div className="flat_card h-[460px] animate-pulse bg-[#fbf6f6]" />}>
               <SignUpForm initialRole={initialRole} />
             </Suspense>
 
-            <p className="mt-5 text-center font-body text-[13px] text-[#6b6a6a]">
+            <p className="mt-5 text-center font-body text-[13px] text-[#6d5f62]">
               Already have an account?{" "}
               <Link href="/auth/signin" className="text_link">
                 Sign in
@@ -52,8 +52,8 @@ export default async function SignUpPage({
                   "Your donation history, confirmed by the hospital that received the unit.",
                 ].map((line) => (
                   <li key={line} className="flex items-start gap-2.5">
-                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#3cc78f]" aria-hidden="true" />
-                    <span className="font-body text-[13px] leading-relaxed text-[#5c5c5c]">{line}</span>
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#c8102e]" aria-hidden="true" />
+                    <span className="font-body text-[13px] leading-relaxed text-[#5f5254]">{line}</span>
                   </li>
                 ))}
               </ul>
@@ -64,7 +64,7 @@ export default async function SignUpPage({
 
             <div className="soft_card">
               <h2 className="text-[18px]">Hospitals and blood banks</h2>
-              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5c5c5c]">
+              <p className="mt-2 font-body text-[13px] leading-relaxed text-[#5f5254]">
                 A hospital account fills your facility details into every request. We verify the phone number
                 on the account before the first request goes live.
               </p>

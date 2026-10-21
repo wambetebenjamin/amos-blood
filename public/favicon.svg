@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Amos Blood">
-  <rect width="64" height="64" rx="14" fill="#3cc78f"/>
+  <rect width="64" height="64" rx="14" fill="#c8102e"/>
   <path d="M32 11C32 11 17.5 27.1 17.5 37.4C17.5 45.4 24 51.9 32 51.9C40 51.9 46.5 45.4 46.5 37.4C46.5 27.1 32 11 32 11Z" fill="#ffffff"/>
-  <path d="M24.6 37.8C24.6 41.7 27.3 44.5 31 44.5" stroke="#3cc78f" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M24.6 37.8C24.6 41.7 27.3 44.5 31 44.5" stroke="#c8102e" stroke-width="3" stroke-linecap="round" fill="none"/>
 </svg>

@@ -28,7 +28,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 <span className="pr-4 text-[17px] leading-snug">{item.question}</span>
                 <ChevronDown
                   size={18}
-                  className={`flex-none text-[#3cc78f] transition-transform ${isOpen ? "rotate-180" : ""}`}
+                  className={`flex-none text-[#c8102e] transition-transform ${isOpen ? "rotate-180" : ""}`}
                   aria-hidden="true"
                 />
               </button>

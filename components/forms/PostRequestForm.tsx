@@ -93,17 +93,17 @@ export function PostRequestForm({
   if (success) {
     return (
       <div className="flat_card">
-        <CheckCircle2 size={42} className="text-[#3cc78f]" aria-hidden="true" />
+        <CheckCircle2 size={42} className="text-[#c8102e]" aria-hidden="true" />
         <h2 className="mt-4 text-[28px]">Your request is live</h2>
-        <p className="mt-2 font-body text-[14.5px] leading-relaxed text-[#6b6a6a]">
+        <p className="mt-2 font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
           Keep this reference. Donors in your county can now see the request and respond with an
           estimated arrival time.
         </p>
-        <div className="mt-5 rounded-[7px] bg-[#f3fcf8] px-5 py-4">
-          <p className="font-body text-[12px] uppercase tracking-[0.14em] text-[#4f7d6e]">Reference</p>
-          <p className="font-body text-[26px] font-bold text-[#191d34]">{success.reference}</p>
+        <div className="mt-5 rounded-[7px] bg-[#fff4f5] px-5 py-4">
+          <p className="font-body text-[12px] uppercase tracking-[0.14em] text-[#7e4a52]">Reference</p>
+          <p className="font-body text-[26px] font-bold text-[#2a1215]">{success.reference}</p>
           {success.expiresAt ? (
-            <p className="mt-1 font-body text-[12.5px] text-[#6b6a6a]">
+            <p className="mt-1 font-body text-[12.5px] text-[#6d5f62]">
               Closes automatically on{" "}
               {new Date(success.expiresAt).toLocaleString("en-KE", {
                 day: "numeric",
@@ -231,7 +231,7 @@ export function PostRequestForm({
         {errors.patientCondition ? (
           <p className="field_error">{errors.patientCondition.message}</p>
         ) : null}
-        <p className="font-body text-[11.5px] leading-relaxed text-[#9a9a9a]">
+        <p className="font-body text-[11.5px] leading-relaxed text-[#7f7174]">
           Do not include patient names, ID numbers or file numbers. Requests stay public for 72 hours.
         </p>
       </div>
@@ -254,7 +254,7 @@ export function PostRequestForm({
           {isSubmitting ? <Loader2 size={16} className="animate-spin" aria-hidden="true" /> : null}
           {isSubmitting ? "Publishing request" : "Publish request"}
         </button>
-        <span className="font-body text-[12.5px] text-[#8a8a8a]">
+        <span className="font-body text-[12.5px] text-[#7f7174]">
           Active for 72 hours, then closes automatically.
         </span>
       </div>

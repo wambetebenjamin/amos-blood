@@ -139,7 +139,7 @@ export function DonorRegistrationForm() {
           <div>
             <span className="eyebrow">Registration complete</span>
             <h2 className="mt-2 text-[30px]">Welcome to Amos Blood</h2>
-            <p className="mt-2 max-w-xl font-body text-[14.5px] leading-relaxed text-[#6b6a6a]">
+            <p className="mt-2 max-w-xl font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
               Your donor profile is active. Save your donor ID, and a hospital can scan the code on your
               card when you arrive to donate.
             </p>
@@ -152,17 +152,17 @@ export function DonorRegistrationForm() {
 
         <div className="mt-7 grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="grid gap-3">
-            <div className="flex items-center justify-between rounded-[7px] bg-[#f9f9ff] px-4 py-3">
-              <span className="font-body text-[13px] text-[#7a7b7c]">Donor ID</span>
-              <span className="font-body text-[16px] font-bold text-[#191d34]">{result.donorId}</span>
+            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf7f8] px-4 py-3">
+              <span className="font-body text-[13px] text-[#7d6c6f]">Donor ID</span>
+              <span className="font-body text-[16px] font-bold text-[#2a1215]">{result.donorId}</span>
             </div>
-            <div className="flex items-center justify-between rounded-[7px] bg-[#f9f9ff] px-4 py-3">
-              <span className="font-body text-[13px] text-[#7a7b7c]">Blood type</span>
+            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf7f8] px-4 py-3">
+              <span className="font-body text-[13px] text-[#7d6c6f]">Blood type</span>
               <span className="blood_badge">{result.bloodType}</span>
             </div>
-            <div className="flex items-center justify-between rounded-[7px] bg-[#f9f9ff] px-4 py-3">
-              <span className="font-body text-[13px] text-[#7a7b7c]">Next eligible donation</span>
-              <span className="font-body text-[14px] font-semibold text-[#191d34]">
+            <div className="flex items-center justify-between rounded-[7px] bg-[#fdf7f8] px-4 py-3">
+              <span className="font-body text-[13px] text-[#7d6c6f]">Next eligible donation</span>
+              <span className="font-body text-[14px] font-semibold text-[#2a1215]">
                 {result.nextEligibleDate
                   ? new Date(result.nextEligibleDate).toLocaleDateString("en-KE", {
                       day: "numeric",
@@ -182,7 +182,7 @@ export function DonorRegistrationForm() {
             initial={reduced ? false : { scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.45, ease: "easeOut" }}
-            className="mx-auto w-full max-w-[280px] rounded-[9px] border border-[#e6f7f0] bg-white p-4 text-center shadow-[0_3px_6px_rgba(0,0,0,0.08)]"
+            className="mx-auto w-full max-w-[280px] rounded-[9px] border border-[#fbe4e7] bg-white p-4 text-center shadow-[0_3px_6px_rgba(0,0,0,0.08)]"
           >
             {result.qrCode ? (
               <Image
@@ -194,8 +194,8 @@ export function DonorRegistrationForm() {
                 className="mx-auto h-auto w-full"
               />
             ) : null}
-            <p className="mt-3 font-display text-[18px] text-[#191d34]">Amos Blood donor</p>
-            <p className="font-body text-[12.5px] text-[#7a7b7c]">{result.donorId}</p>
+            <p className="mt-3 font-display text-[18px] text-[#2a1215]">Amos Blood donor</p>
+            <p className="font-body text-[12.5px] text-[#7d6c6f]">{result.donorId}</p>
           </motion.div>
         </div>
 
@@ -223,19 +223,19 @@ export function DonorRegistrationForm() {
               <span
                 className={`flex h-9 w-9 items-center justify-center rounded-full font-body text-[13px] font-bold ${
                   step > number
-                    ? "bg-[#3cc78f] text-white"
+                    ? "bg-[#c8102e] text-white"
                     : step === number
-                      ? "bg-[#e6f7f0] text-[#1c7a58]"
-                      : "bg-[#f4f4f6] text-[#a3a3ad]"
+                      ? "bg-[#fbe4e7] text-[#8f0b1f]"
+                      : "bg-[#f7edee] text-[#8d7f82]"
                 }`}
               >
                 {step > number ? <Check size={15} aria-hidden="true" /> : number}
               </span>
-              {number < 3 ? <span className="h-px w-5 bg-[#e3e3e8]" aria-hidden="true" /> : null}
+              {number < 3 ? <span className="h-px w-5 bg-[#e9dfe0]" aria-hidden="true" /> : null}
             </div>
           ))}
         </div>
-        <span className="font-body text-[12.5px] font-semibold uppercase tracking-[0.12em] text-[#8a8a8a]">
+        <span className="font-body text-[12.5px] font-semibold uppercase tracking-[0.12em] text-[#7f7174]">
           Step {step} of 3
         </span>
       </div>
@@ -275,7 +275,7 @@ export function DonorRegistrationForm() {
                       {...register("dateOfBirth", { required: "Select your date of birth" })}
                     />
                     {errors.dateOfBirth ? <p className="field_error">{errors.dateOfBirth.message}</p> : null}
-                    <p className="font-body text-[11.5px] text-[#9a9a9a]">
+                    <p className="font-body text-[11.5px] text-[#7f7174]">
                       You must be between 16 and 65 years old.
                     </p>
                   </div>
@@ -304,7 +304,7 @@ export function DonorRegistrationForm() {
                         </option>
                       ))}
                     </select>
-                    <p className="font-body text-[11.5px] text-[#9a9a9a]">
+                    <p className="font-body text-[11.5px] text-[#7f7174]">
                       Not sure? A hospital can confirm with a quick test when you donate.
                     </p>
                   </div>
@@ -364,7 +364,7 @@ export function DonorRegistrationForm() {
                     {errors.lastDonationDate ? (
                       <p className="field_error">{errors.lastDonationDate.message}</p>
                     ) : null}
-                    <p className="font-body text-[11.5px] text-[#9a9a9a]">
+                    <p className="font-body text-[11.5px] text-[#7f7174]">
                       We use this to calculate your next eligible donation date.
                     </p>
                   </div>
@@ -375,11 +375,11 @@ export function DonorRegistrationForm() {
             {step === 3 ? (
               <>
                 <h2 className="text-[24px]">Health declaration</h2>
-                <p className="font-body text-[13.5px] leading-relaxed text-[#6b6a6a]">
+                <p className="font-body text-[13.5px] leading-relaxed text-[#6d5f62]">
                   Please read each statement and confirm. If any statement is not true today, wait until
                   it is, or call us on WhatsApp and a coordinator will advise you.
                 </p>
-                <div className="rounded-[7px] bg-[#f9f9ff] px-4">
+                <div className="rounded-[7px] bg-[#fdf7f8] px-4">
                   {declarations.map((declaration, index) => (
                     <label className="check_row" key={declaration}>
                       <input
@@ -399,9 +399,9 @@ export function DonorRegistrationForm() {
                 </div>
                 {healthError ? <p className="field_error">{healthError}</p> : null}
 
-                <div className="rounded-[7px] border border-[#eef0f3] p-4">
-                  <p className="font-body text-[13px] font-semibold text-[#191d34]">Summary</p>
-                  <ul className="mt-2 grid gap-1.5 font-body text-[13px] text-[#6b6a6a] sm:grid-cols-2">
+                <div className="rounded-[7px] border border-[#f2e6e7] p-4">
+                  <p className="font-body text-[13px] font-semibold text-[#2a1215]">Summary</p>
+                  <ul className="mt-2 grid gap-1.5 font-body text-[13px] text-[#6d5f62] sm:grid-cols-2">
                     <li>Name: {watched.fullName || "Not set"}</li>
                     <li>Blood type: {watched.bloodType}</li>
                     <li>County: {watched.county}</li>

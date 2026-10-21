@@ -4,6 +4,24 @@ import { useEffect, useRef, useState } from "react";
 
 const DURATION = 1900;
 const SKIP_AFTER = 1000;
+const STORAGE_KEY = "amos_blood_preloaded";
+
+/** sessionStorage can throw in private mode; the loader must still run. */
+function readPreloaded() {
+  try {
+    return window.sessionStorage.getItem(STORAGE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markPreloaded() {
+  try {
+    window.sessionStorage.setItem(STORAGE_KEY, "1");
+  } catch {
+    // Storage is optional. The loader simply plays once per page load.
+  }
+}
 
 export function Preloader() {
   const [visible, setVisible] = useState(false);
@@ -16,7 +34,7 @@ export function Preloader() {
     if (typeof window === "undefined") {
       return;
     }
-    if (window.sessionStorage.getItem("amos_blood_preloaded") === "1") {
+    if (readPreloaded()) {
       return;
     }
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -47,7 +65,7 @@ export function Preloader() {
         return;
       }
       finished.current = true;
-      window.sessionStorage.setItem("amos_blood_preloaded", "1");
+      markPreloaded();
       window.setTimeout(() => setVisible(false), 220);
     };
 
@@ -73,7 +91,7 @@ export function Preloader() {
   const skip = () => {
     if (!finished.current) {
       finished.current = true;
-      window.sessionStorage.setItem("amos_blood_preloaded", "1");
+      markPreloaded();
       setVisible(false);
     }
   };
@@ -82,13 +100,13 @@ export function Preloader() {
     <div className="preloader" role="status" aria-live="polite" aria-label="Loading Amos Blood">
       {reduced ? null : (
         <svg width="96" height="104" viewBox="0 0 96 104" fill="none" aria-hidden="true" focusable="false">
-          <ellipse cx="48" cy="92" rx="34" ry="5.5" fill="#3CC78F" opacity="0.12" />
-          <ellipse className="ripple_one" cx="48" cy="92" rx="22" ry="3.6" stroke="#3CC78F" strokeWidth="1.6" opacity="0" />
-          <ellipse className="ripple_two" cx="48" cy="92" rx="22" ry="3.6" stroke="#3CC78F" strokeWidth="1.4" opacity="0" />
+          <ellipse cx="48" cy="92" rx="34" ry="5.5" fill="#C8102E" opacity="0.12" />
+          <ellipse className="ripple_one" cx="48" cy="92" rx="22" ry="3.6" stroke="#C8102E" strokeWidth="1.6" opacity="0" />
+          <ellipse className="ripple_two" cx="48" cy="92" rx="22" ry="3.6" stroke="#C8102E" strokeWidth="1.4" opacity="0" />
           <g className="drop_fall">
             <path
               d="M48 16C48 16 30 37.5 30 50.2C30 60.3 38.1 68.4 48 68.4C57.9 68.4 66 60.3 66 50.2C66 37.5 48 16 48 16Z"
-              fill="#3CC78F"
+              fill="#C8102E"
             />
             <path
               d="M39.5 50.6C39.5 55.4 42.9 58.8 47.2 58.8"
@@ -109,7 +127,7 @@ export function Preloader() {
         <button
           type="button"
           onClick={skip}
-          className="mt-4 font-body text-[12px] font-semibold uppercase tracking-[0.18em] text-[#7a7b7c] underline underline-offset-4 hover:text-[#2fa877]"
+          className="mt-4 font-body text-[12px] font-semibold uppercase tracking-[0.18em] text-[#7d6c6f] underline underline-offset-4 hover:text-[#9a0c22]"
         >
           Skip
         </button>

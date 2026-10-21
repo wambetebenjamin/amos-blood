@@ -17,20 +17,20 @@ export default function ErrorPage({
   }, [error]);
 
   return (
-    <section className="section_padding bg-[#f7f7f7]">
+    <section className="section_padding bg-[#fbf6f6]">
       <div className="container-t">
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow">Error 500</span>
-          <h1 className="mt-4 text-[64px] leading-none text-[#191d34] sm:text-[92px]">500</h1>
+          <h1 className="mt-4 text-[64px] leading-none text-[#2a1215] sm:text-[92px]">500</h1>
           <h2 className="mt-4 text-[30px]">Something broke on our side</h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-[14.5px] leading-relaxed text-[#6b6a6a]">
+          <p className="mx-auto mt-4 max-w-xl font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
             The page could not load. This is not your fault and no data was lost. Try again, and if a request
             is urgent, message a coordinator on WhatsApp so a person can help immediately.
           </p>
 
           {error.digest ? (
-            <p className="mt-4 font-body text-[12px] text-[#9a9a9a]">
-              Reference for support: <span className="font-semibold text-[#6b6a6a]">{error.digest}</span>
+            <p className="mt-4 font-body text-[12px] text-[#7f7174]">
+              Reference for support: <span className="font-semibold text-[#6d5f62]">{error.digest}</span>
             </p>
           ) : null}
 
@@ -45,7 +45,7 @@ export default function ErrorPage({
             </a>
           </div>
 
-          <p className="mt-6 font-body text-[13px] text-[#8a8a8a]">
+          <p className="mt-6 font-body text-[13px] text-[#7f7174]">
             Or return to the{" "}
             <Link href="/" className="text_link">
               homepage

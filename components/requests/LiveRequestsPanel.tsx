@@ -10,19 +10,20 @@ export function LiveRequestsPanel({ requests }: { requests: BloodRequest[] }) {
 
   return (
     <div>
-      <AnimatePresence mode="popLayout">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {requests.map((request, index) => (
-            <motion.div key={request.ref} layout exit={{ opacity: 0, y: -12 }}>
-              <RequestCard request={request} index={index} onResponded={setNotice} />
-            </motion.div>
-          ))}
-        </div>
-      </AnimatePresence>
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {requests.map((request, index) => (
+          <RequestCard
+            key={request.ref}
+            request={request}
+            index={index}
+            onResponded={setNotice}
+          />
+        ))}
+      </div>
 
       {requests.length === 0 ? (
         <div className="flat_card text-center">
-          <p className="font-body text-[15px] text-[#6b6a6a]">
+          <p className="font-body text-[15px] text-[#6d5f62]">
             No urgent requests are open right now. Register as a donor and we will alert you the moment
             your type is needed.
           </p>

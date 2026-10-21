@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Dev servers are proxied through the preview host, which Next otherwise
+  // rejects as a cross-origin request for /_next assets.
+  allowedDevOrigins: ["*.e2b.app"],
   poweredByHeader: false,
   images: {
     remotePatterns: [

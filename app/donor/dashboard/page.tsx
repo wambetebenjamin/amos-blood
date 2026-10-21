@@ -27,7 +27,7 @@ export default async function DonorDashboardPage() {
           <div className="container-t max-w-2xl">
             <div className="flat_card text-center">
               <h1 className="text-[30px]">Finish your donor profile</h1>
-              <p className="mt-3 font-body text-[14.5px] leading-relaxed text-[#6b6a6a]">
+              <p className="mt-3 font-body text-[14.5px] leading-relaxed text-[#6d5f62]">
                 We could not find a donor record for this session. Register once and the dashboard fills
                 itself with your county requests and eligibility date.
               </p>
@@ -59,8 +59,8 @@ export default async function DonorDashboardPage() {
       <section className="section_padding">
         <div className="container-t grid gap-6">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="font-body text-[13px] text-[#6b6a6a]">
-              Donor ID <span className="font-semibold text-[#191d34]">{dashboard.donor.id}</span> ·{" "}
+            <p className="font-body text-[13px] text-[#6d5f62]">
+              Donor ID <span className="font-semibold text-[#2a1215]">{dashboard.donor.id}</span> ·{" "}
               {dashboard.donor.bloodType} · {dashboard.donor.county} County
             </p>
             <div className="flex flex-wrap items-center gap-4">
